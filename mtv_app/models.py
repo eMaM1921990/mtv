@@ -71,7 +71,7 @@ class Car(models.Model):
     created_at = models.DateTimeField(default=timezone.now())
 
     def __unicode__(self):
-        return self.model
+        return self.model.model_name
 
     class Meta:
         managed = MANAGED
