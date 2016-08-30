@@ -79,13 +79,15 @@ class Car(models.Model):
 
 
 class CarInspection(models.Model):
-    inspection_category = models.CharField(max_length=45, blank=True, null=True)
-    inspection_outline = models.CharField(max_length=45, blank=True, null=True)
-    inspection_description = models.TextField(max_length=2L, blank=True, null=True)
-    inspection_rate = models.IntegerField(default=0)
+    inspection_category = models.CharField(max_length=45, blank=True, null=True, verbose_name='Category ')
+    inspection_outline = models.CharField(max_length=45, blank=True, null=True, verbose_name='Outline EN')
+    inspection_outline_ar = models.CharField(max_length=150, blank=True, null=True, verbose_name='Outline AR')
+    inspection_description = models.TextField(max_length=2L, blank=True, null=True, verbose_name='Desc EN')
+    inspection_description_ar = models.TextField(max_length=2L, blank=True, null=True, verbose_name='Desc AR')
+    inspection_rate = models.IntegerField(default=0, verbose_name='Rate')
     car = models.ForeignKey(Car, models.CASCADE, blank=True, null=True)
-    inspection_outline_ar = models.CharField(max_length=150, blank=True, null=True)
-    inspection_description_ar = models.TextField(max_length=2L, blank=True, null=True)
+
+
 
     class Meta:
         managed = MANAGED

@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.forms.widgets import TextInput
 from models import *
 # Register your models here.
 
@@ -29,15 +30,28 @@ class Model(admin.ModelAdmin):
     list_filter = list_display
 
 
+class InspectionForm(admin.TabularInline):
+    model = CarInspection
+    fk_name = 'car'
+    formfield_overrides = {
+        models.IntegerField: {'widget': TextInput(attrs={'size': '20', 'style': "width:15%"})},
+    }
+
+
+
 @admin.register(Car)
 class Car(admin.ModelAdmin):
     list_display = ['id', 'model', 'year', 'km', 'color', 'location', 'price', 'is_approved', 'is_active', 'created_at']
-    list_select_related = ['model', 'model__brand']
+    # list_select_related = ['model', 'model__brand']
     list_editable = list_display
     list_filter = list_display
     search_fields = list_display
     fields = ['model', 'year', 'km', 'color', 'location', 'price', 'is_approved', 'is_active', 'car_image_one',
               'car_image_two', 'car_image_three', 'car_image_four']
+    inlines = [InspectionForm]
+
+
+
 
 
 
