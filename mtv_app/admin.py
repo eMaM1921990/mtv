@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.forms.widgets import TextInput
+from django.forms.widgets import TextInput, SelectMultiple
 from models import *
 # Register your models here.
 
@@ -30,13 +30,25 @@ class Model(admin.ModelAdmin):
     list_filter = list_display
 
 
-class InspectionForm(admin.TabularInline):
+class InspectionForm(admin.StackedInline):
     model = CarInspection
     fk_name = 'car'
     formfield_overrides = {
         models.IntegerField: {'widget': TextInput(attrs={'size': '20', 'style': "width:15%"})},
     }
+    suit_classes = 'suit-tab suit-tab-inspections'
 
+
+class OptionsForm(admin.StackedInline):
+    model = CarOptions
+    fk_name = 'car'
+    formfield_overrides = {
+        models.CharField: {
+            'widget': SelectMultiple(attrs={'size': '10'}),
+        }
+    }
+    suit_classes = 'suit-tab suit-tab-options'
+    max_num = 1
 
 
 @admin.register(Car)
@@ -46,9 +58,21 @@ class Car(admin.ModelAdmin):
     list_editable = list_display
     list_filter = list_display
     search_fields = list_display
-    fields = ['model', 'year', 'km', 'color', 'location', 'price', 'is_approved', 'is_active', 'car_image_one',
-              'car_image_two', 'car_image_three', 'car_image_four']
-    inlines = [InspectionForm]
+    # fields = ['model', 'year', 'km', 'color', 'location', 'price', 'is_approved', 'is_active', 'car_image_one',
+    # 'car_image_two', 'car_image_three', 'car_image_four']
+    inlines = [InspectionForm, OptionsForm]
+    fieldsets = [
+
+        (None, {
+            'classes': ('suit-tab', 'suit-tab-general',),
+            'fields': ['model', 'year', 'km', 'color', 'location', 'price', 'is_approved', 'is_active', 'car_image_one',
+                       'car_image_two', 'car_image_three', 'car_image_four']
+        }),
+
+    ]
+
+    suit_form_tabs = (('general', 'General'), ('inspections', 'Inspection'), ('options', 'Options'),)
+
 
 
 

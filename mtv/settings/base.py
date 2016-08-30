@@ -170,5 +170,15 @@ ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 #     }
 # }
 
+# DJANGO SUIT
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'MTV AdminPanel',
+    'SHOW_REQUIRED_ASTERISK': True,
+    'CONFIRM_UNSAVED_CHANGES': True,
+    'MENU': (
+            'sites',
+            {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
+        ),
+}
 
 

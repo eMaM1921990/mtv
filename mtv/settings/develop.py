@@ -3,7 +3,7 @@ from base import *
 
 DB_NAME = 'mtv'
 DB_USER = 'root'
-DB_PASSWORD = '0122308791'
+DB_PASSWORD = 'admin'
 DB_HOST = 'localhost'
 DB_PORT = '3306'
 DATABASES = {
@@ -17,5 +17,4 @@ DATABASES = {
     }
 }
 
-
-
+MEDIA_ROOT = '/home/emam/'
