@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'mtv_app'
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -158,16 +158,16 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_VERIFICATION = "none"
 # ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_SIGNUP_FORM_CLASS = 'mtv_app.forms.SignupForm'
+# ACCOUNT_SIGNUP_FORM_CLASS = 'mtv_app.forms.SignupForm'
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
-
-SOCIALACCOUNT_QUERY_EMAIL = True
-SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        'SCOPE': ['email', 'publish_stream'],
-        'METHOD': 'js_sdk'  # instead of 'oauth2'
-    }
-}
+#
+# SOCIALACCOUNT_QUERY_EMAIL = True
+# SOCIALACCOUNT_PROVIDERS = {
+#     'facebook': {
+#         'SCOPE': ['email', 'publish_stream'],
+#         'METHOD': 'js_sdk'  # instead of 'oauth2'
+#     }
+# }
 
 
 
