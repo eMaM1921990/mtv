@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.forms.widgets import TextInput, SelectMultiple
+from django.forms.widgets import TextInput, SelectMultiple, CheckboxInput
 from models import *
 # Register your models here.
 
@@ -44,7 +44,7 @@ class OptionsForm(admin.StackedInline):
     fk_name = 'car'
     formfield_overrides = {
         models.CharField: {
-            'widget': SelectMultiple(attrs={'size': '10'}),
+            'widget': CheckboxInput(attrs={'size': '10'}),
         }
     }
     suit_classes = 'suit-tab suit-tab-options'
