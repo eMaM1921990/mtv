@@ -1,0 +1,27 @@
+{% load staticfiles %}
+{% load i18n %}
+<section id="new-deals">
+    <div class="container">
+        <div class="row" style="position:relative;">
+            <div class="col-lg-12">
+                <h2 class="section-heading" style="color:#2d3e50;">{% trans 'New Deals' %}</h2>
+
+{#                <p class="section-p">Brand new models from Suzuki, Nissan and Changan</p>#}
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12" style="position:relative;">
+                <div id="owler" class="owl-carousel">
+                    {% for car in new_cars %}
+                        {% include 'base/new_deals_car_card.html' %}
+                    {% endfor %}
+                </div>
+                <div class="customNavigation">
+                    <a class="btn prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                    <a class="btn next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

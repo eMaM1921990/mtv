@@ -1,0 +1,14 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="item car-card">
+                        <div class="col-lg-12 no-padding"><h3>{{ car.model.brand.brand_name|add:' '|add:car.model.model_name|add:' '|add:car.year }}</h3></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_one.url }}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_two.url }}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_three.url }}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_four.url }}"></div>
+                        <div class="brand"><strong>{{ car.model.brand.brand_name }}</strong><br>{{ car.model.model_name }}</div>
+                        <div class="col-lg-12 text-left add-garage fav"><i class="fa fa-heart fa-2x"></i><a
+                                href="javascript:void(0)"> {% trans 'Add to garage' %}</a></div>
+                        <div class="col-lg-12 text-left price"><h2>{{ car.price }} EGP</h2>
+                            <a href="profile.html" class="discover">{% trans 'Discover' %}</a></div>
+</div>

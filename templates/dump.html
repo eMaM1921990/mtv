@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Bootstrap</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+    <!-- Custom Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:900,400' rel='stylesheet' type='text/css'>
+	
+
+	<link rel="stylesheet" href="css/master.css" type="text/css">
+	<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	    <script src="lslider/layerslider/js/jquery.js"></script>
+
+
+
+</head>
+
+<body id="page-top" class="profile-page">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                   <!-- <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> -->
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="./img/logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+					<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Sign in<img class="nav-icon" src="./img/user.png">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="width:268px;padding:0;">
+      <li role="presentation" style="position:absolute;width: 100%;height: 45px;top:0px;left:0;padding: 10px 20px;background-color: #231f20;color: #fff;font-size: 17px;    text-indent: 5px;"><span class="arrow-down"></span>Login to your Account</li>
+      <li role="presentation">
+		<form class="form-horizontal" role="form">
+    <div class="form-group">
+      <div class="col-sm-12 padding-5">
+	    <span><i class="fa fa-user" aria-hidden="true"></i></span>
+        <input type="email" class="form-control" id="email" placeholder="Username">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12 padding-5"> 
+        <span><i class="fa fa-lock" aria-hidden="true"></i></span>	  
+        <input type="password" class="form-control" id="pwd" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Keep me logged in</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-12 padding-5">
+        <button type="submit" class="btn btn-default" style="width: 100%;padding: 6px 10px;font-size:20px;background-color: #bc9d5b;color: #fff;margin: 5px 0;text-align: center;border-radius: 0;">Login</button>
+      </div>
+    </div>
+  </form>
+	  </li>
+	  <li role="presentation" style="width:100%;font-size: 15px;background-color: #000;color: #fff;margin:5px 0;text-align:center;"><a href="signup.html">Sign Up</a></li>
+      <li role="presentation" style="width:100%;height:38px;font-size: 12px;background-color: #014b96;color: #fff;margin:5px 0;text-align:center;"><i class="fa fa-facebook-official" aria-hidden="true"  style="margin-right: 8px;font-size: 16px;line-height: 0px;"></i> Sign in with Facebook</li>
+	  <li role="presentation" style="width:100%;height:38px;font-size: 12px;background-color: #31aae1;color: #fff;margin:5px 0;text-align:center;"><i class="fa fa-twitter" aria-hidden="true" style="margin-right: 8px;font-size: 16px;line-height: 0px;"></i> Sign in with Twitter</li>
+    </ul>
+  </div>
+                        <!--<a class="page-scroll" href="#about">Sign in <img class="nav-icon" src="./img/user.png"></a>-->
+                    </li>
+                    <li class="garagelink">
+                        <a class="page-scroll" href="garage.html">My Garage <img class="nav-icon" src="./img/garage.png"></a>
+                    </li>
+                    <li class="selllink">
+                        <a class="page-scroll" href="sell.html">SELL</a>
+                    </li>
+					<li class="tradelink">
+                        <a class="page-scroll" href="tradein.html">TRADE IN</a>
+                    </li>
+                    <li class="buylink">
+                        <a class="page-scroll" href="buy.html">BUY</a>
+                    </li>
+					<li class="lang-eng">
+                        <a class="page-scroll" href="arabic/profile.html"><img src="img/arabic-lang.png"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+	               <ul class="profile-controls">
+							<li><img style="float:left;width:48%;margin-right:4%;" class="previous" src="img/previous.png"></li>
+							<li><img style="float:left;width:48%;" class="next" src="img/next.png"></li>
+						</ul>
+					<ul class="car-shots" style="">
+					<li class="hero-li"><img style="height:100%;" src="./img/car-0009-1.jpg"></li>
+					<li><img style="height:100%;" src="./img/car-0009-2.jpg"></li>
+					<li><img style="height:100%;" src="./img/car-0009-3.jpg"></li>
+					<li><img style="height:100%;" src="./img/car-0009-4.jpg"></li>
+					</ul>
+					<div class="car-tag">
+						<h1>Nissan Qashqai<span>2013</span></h1>
+						<p>Start engine, Airbags, Parking sensor, Multifunction steering wheel, Cruise control & Alloy wheels</p>
+						<ul class="badges-list">
+							<li><img style="height:100%;" src="./img/badge-0001.png" data-toggle="tooltip" data-placement="bottom" title="Great Condition" class="orange-tooltip"></li>
+							<li><img style="height:100%;" src="./img/badge-0002.png" data-toggle="tooltip" data-placement="bottom" title="6 months in warranty" class="orange-tooltip"></li>
+							<li><img style="height:100%;" src="./img/badge-0003.png" data-toggle="tooltip" data-placement="bottom" title="Insured" class="orange-tooltip"></li>
+						</ul>
+						<h1>195,000 LE</h1>
+					</div>
+    </header>
+
+    <section id="car-profile">
+
+        <div class="container">
+			
+				<div class="container">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 no-padding">
+                    <img src="img/explore-icon.png" style="width:100%;height:auto;margin-top:-15px;">
+                </div>
+				<div class="col-lg-11 col-xs-10">
+                    <h1 class="point-heading">Want to explore this amazing Nissan?</h1>
+					<hr class="divider"></hr>
+					<p>This vehicle comes equipped with the following features</p>
+                </div>
+				<div class="col-lg-1 col-xs-2 no-padding">
+                </div>
+				<div class="col-lg-11 col-sm-12 col-xs-12">
+                   <img src="img/options-list.png" style="width:70%;height:auto;margin:30px 0 120px;" class="options">
+                </div>
+				</div>
+
+				<div class="container">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 no-padding">
+                    <img src="img/Inspections-icon.png" style="width:100%;height:auto;margin-top:-15px;">
+                </div>
+				<div class="col-lg-11 col-xs-10">
+                    <h1 class="point-heading">Inspections</h1>
+					<hr class="divider"></hr>
+					</div>
+					
+					<div class="col-lg-12 col-xs-12">
+					<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+		<img src="img/ins-body.png" class="inspection-icon">
+          <h1 class="point-heading">Body</h1> 
+        </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+		<img src="img/ins-engine.png" class="inspection-icon">
+           <h1 class="point-heading">Engine / Transmission</h1> 
+        </a><i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+		<img src="img/ins-suspension.png" class="inspection-icon">
+          <h1 class="point-heading">Suspension</h1> 
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+		<img src="img/ins-interiors.png" class="inspection-icon">
+          <h1 class="point-heading">Interiors</h1> 
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+		<img src="img/ins-options.png" class="inspection-icon">
+          <h1 class="point-heading">Electronics / Features</h1> 
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>  
+</div>
+
+					
+                </div>
+				</div>
+				
+				
+				<div class="container">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 no-padding">
+                    <img src="img/shoppingcart-icon.png" style="width:100%;height:auto;margin-top:-15px;">
+                </div>
+				<div class="col-lg-11 col-xs-10">
+                    <h1 class="point-heading">Want to buy this amazing Nissan?</h1>
+					<hr class="divider"></hr>
+					<p>Sign in using your account to be able to register your car</p>
+                </div>
+				</div><br><br><br><a href="javascript:void(0)" class="btn btn-default buynow-btn">BUY NOW</a>
+				
+				
+        </div>
+    </section>
+
+   <section id="contact" style="border-top:2px solid #ddd;">
+        <div class="container">
+            <div class="row">
+               <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12" style="border-right:2px solid #eee;">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding">
+					<a href="sell.html"><h3>Sell a car</h3></a>
+					<p>How to Sell your car?</p>
+                    </div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding">
+					<a href="buy.html"><h3>Buy a car</h3></a>
+					<p>How to buy a car?</p>
+                    </div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding">
+					<a href="garage.html"><h3>Garage</h3></a>
+					<p>You can add your favorite cars to your garage</p>
+                    </div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+					<a href="aboutus.html"><h3>About us</h3></a>
+					<p>A full insight of our heritage</p>
+                    </div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding">
+					<a href="contactus.html"><h3>Contact us</h3></a>
+					<p>Send us an email<br>E-mail@Moderntruevalue.com</p>
+                    </div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding">
+					<h3>Call Center</h3>
+					<p><i class="fa fa-headphones fa-2x" aria-hidden="true"></i><font style="font-family:'ProximaNovaBlRegular';color:#BB9D5B;font-size:30px;"> 16833</font></p>
+                    </div>
+               </div>
+			   <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+					<h3>Sign in
+					<ul class="social-login">
+					<li><img src="./img/fb.png"></li>
+					<li><img src="./img/tw.png"></li>
+					</ul></h3>
+					<p>Sign in using your Facebook or Twitter account</p>
+					</div>
+			   </div>
+        </div>
+		</div>
+    </section>
+	    <section id="social-footer" style="float:left;width:100%;margin-top:0px;background-color:#000;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 text-left">
+                    <h6 class="footer-heading col-lg-5 col-md-5 hidden-sm hidden-xs">Follow us on</h6>
+                    <ul class="social-icons col-lg-7 col-md-7 col-sm-12 col-xs-12">
+					<li><img src="./img/fb.png"></li>
+					<li><img src="./img/tw.png"></li>
+					<li><img src="./img/gp.png"></li>
+					<li><img src="./img/ig.png"></li>
+					</ul>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 text-right">
+                    <h6 class="footer-heading app-heading col-lg-5 col-md-5 hidden-sm hidden-xs">Download App</h6>
+                    <ul class="app-btns col-lg-7 col-md-7 col-sm-12 col-xs-12">
+					<li><a href="javascript:void(0)"><i class="fa fa-android fa-2x" aria-hidden="true"></i><span>Android</span></a></li>
+					<li><a href="javascript:void(0)"><i class="fa fa-apple fa-2x" aria-hidden="true"></i><span>IOS app</span></a></li>
+					</ul>
+                </div>
+				<div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-center">
+					<div class="ft_rights">Copyright © 2016 MTV - All Rights Reserved</div>
+				<div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+	<script src="js/master.js"></script>
+<script src="js/profile.js"></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>		
+	
+</body>
+
+</html>

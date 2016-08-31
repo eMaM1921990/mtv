@@ -1,0 +1,125 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="buy">
+        <div id="closer">Back <i class="fa fa-times-circle-o fa-4x" aria-hidden="true"></i></div>
+        <div class="buy-anim-block">
+            <span class="anim-htb">{% trans 'HOW TO' %} <strong>{% trans 'BUY' %}</strong></span>
+            <a href="buy.html"><h1 class="buy-now">{% trans 'BUY NOW' %}</h1></a>
+                {% blocktrans %}
+					<span class="texst block5"><h2>Car track down</h2>
+					<p>Check our website regularly and select from wide variety of different cars that will definitely
+                        match your needs.</p>
+					<p>You can add one car or more to your garage to compare between and when you are done just fill in
+                        your information and we will get back to you shortly.</p>
+					</span>
+					<span class="texst block6"><h2>Inspect &amp; examine</h2>
+					<p>One of our representatives will invite you to come and check the car and take a look on the
+                        detailed report.</p>
+					<p>Also you can test drive the car to make sure that it matches your expectations.</p>
+					</span>
+					<span class="texst block7"><h2>Seal the deal</h2>
+					<p>If you like the car then congratulations, we will make sure to handle the required paper work for
+                        you. You can pay for us either in cash or through bank transfer.</p>
+					</span>
+            {% endblocktrans %}
+
+            <div class="item5-css-clip-path"><img
+                    style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                    src="{% static 'img/phone-mask.png' %}" alt=""></div>
+            <div class="item6-css-clip-path">
+                <img style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                     src="{% static 'img/phone-mask.png' %}" alt="">
+                <img class="test-drive" src="{% static 'img/test-drive.png' %}" alt="">
+                <img class="rearw" src="{% static 'img/testcar-rearw.png' %}" alt="">
+                <img class="frontw" src="{% static 'img/testcar-frontw.png' %}" alt="">
+            </div>
+            <div class="item7-css-clip-path">
+                <img style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                     src="{% static 'img/phone-mask.png' %}" alt="">
+                <img class="zoml" src="{% static 'img/zomaral.png' %}" alt="">
+                <img class="zomr" src="{% static 'img/zomarar.png' %}" alt="">
+            </div>
+
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 17%;height: 406px;top: 339px;right: 7.5%;">
+                <svg class="swirls6 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="0 0 158 406">
+                    <path id="path6" fill="none" stroke-width="0" stroke-dasharray="4,17"
+                          d="M30,2c-17.0521287393,25.104457001,-23.2621721418,36.4795345055,-26,90s0.5350076361999996,93.7439835708,56,131s66.07145293759999,29.601468710300026,90,63s-12.222788569700015,41.27073077419999,-56,117"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 28%;height: 300px;top: 708px;right: 35%;">
+                <svg class="swirls7 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="0 0 511 262">
+                    <path id="path7" fill="none" stroke-width="6" stroke-dasharray="4,20"
+                          d="M503,5c-21.494396632199994,-1.5782627844000001,-64.93299353880002,1.4523369997,-86,6s-103.83978940740002,55.592127575000006,-143,90s-10.522928662699996,74.5450314277,-60,115s-71.6162913469,37.96480351380001,-98,41s-91.8131906611,-10.050699915400003,-115,-23"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 31%;height: 600px;top: 800px;right: 53%;transform: rotate(5deg);">
+                <svg class="swirls8 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="0 0 595 599">
+                    <path id="path8" fill="none" stroke-width="9" stroke-dasharray="6,24"
+                          d="M50,11c-32.9824504617,8.0458660004,-41.8452840542,43.4972003706,-41,61s15.0973087343,48.5532251492,22,64s21.622707984599998,25.476013859900007,40,69s-22.115686668499997,125.2736173802,13,160s115.0161551868,69.31767466640002,153,93s52.2295713437,60.08146399880002,107,75s60.684893343,57.11242519380005,122,58s94.78007715249998,-26.592049025599977,123,-43"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 20%;height: 109px;top: 1272px;right: 20.5%;">
+                <svg class="swirls9 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="0 0 255 106">
+                    <path id="path9" fill="none" stroke-width="0" stroke-dasharray="4,20"
+                          d="M3,3c12.2537874592,12.5685994807,41.1866992477,33.3799921707,57,41s56.16543549759999,31.672412990500007,68,25s22.5021229173,-7.8969947594999965,32,-11s7.144559040600001,-1.4270115292000014,12,4s8.403285096600001,-4.653283837899998,13,-5s65.7612882068,42.5597755582,67,47"/>
+                </svg>
+            </div>
+
+        </div>
+		
+		<span class="fade-in two">
+		<h1 class="buy-title">
+            {% trans 'BUY' %}
+        </h1>
+					<p>
+                        {% trans 'Choose from a wide selection of pre-inspected cars at competitive prices' %}
+                    </p>
+					
+						<h1 class="buy-how">
+                            {% trans 'How to buy?' %}
+                        </h1>
+					
+					</span>
+
+
+        <div id="layerslider3">
+            <div class="ls-layer hero-slide" style="slidedelay: 5000; transition2d: 3;">
+                <img class="ls-s-1 buy-car" src="{% static 'lslider/gallery/buy0.png' %}" alt="R2yak Character"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+            <div class="ls-layer hero-slide" style="slidedelay: 5000; transition2d: 3;">
+                <img class="ls-s-1 buy-car1" src="{% static 'lslider/gallery/buy1.png' %}" alt="R2yak Character"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor1"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+            <div class="ls-layer hero-slide" style="slidedelay: 5000; transition2d: 3;">
+                <img class="ls-s-1 buy-car" src="{% static 'lslider/gallery/buy0.png' %}" alt="R2yak Character"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+            <div class="ls-layer hero-slide" style="slidedelay: 5000; transition2d: 3;">
+                <img class="ls-s-1 buy-car1" src="{% static 'lslider/gallery/buy1.png' %}" alt="R2yak Character"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor1"
+                     style="slidedirection : bottom; delayin : 0; slideoutdirection : top; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+        </div>
+
+
+    </div>

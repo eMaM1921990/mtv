@@ -1,0 +1,83 @@
+{% load staticfiles %}
+{% load i18n %}
+<section id="contact" style="border-top:2px solid #ddd;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12" style="border-right:2px solid #eee;">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+                    <a href="sell.html"><h3>{% trans 'Sell a car' %}</h3></a>
+
+                    <p>{% trans 'How to Sell your car?' %}</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+                    <a href="buy.html"><h3>{% trans 'Buy a car' %}</h3></a>
+
+                    <p>{% trans 'How to buy a car?' %}</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+                    <a href="garage.html"><h3>{% trans 'Garage' %}</h3></a>
+
+                    <p>{% trans 'You can add your favorite cars to your garage' %}</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+                    <a href="aboutus.html"><h3>{% trans 'About us' %}</h3></a>
+
+                    <p>{% trans 'A full insight of our heritage' %}</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+                    <a href="contactus.html"><h3>{% trans 'Contact us' %}</h3></a>
+
+                    <p>{% trans 'Send us an email' %}<br>E-mail@Moderntruevalue.com</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 no-padding cblock">
+                    <h3>{% trans 'Call Center' %}</h3>
+
+                    <p><i class="fa fa-headphones fa-2x" aria-hidden="true"></i><font
+                            style="font-family:'ProximaNovaBlRegular';color:#BB9D5B;font-size:30px;"> 16833</font></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <h3>{% trans 'Sign in' %}
+                        <ul class="social-login">
+                            <li><img src="{% static 'img/fb.png' %}"></li>
+                            <li><img src="{% static 'img/tw.png' %}"></li>
+                        </ul>
+                    </h3>
+                    <p>{% trans 'Sign in using your Facebook or Twitter account' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="social-footer" style="float:left;width:100%;margin-top:0px;background-color:#000;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 text-left">
+                <h6 class="footer-heading col-lg-5 col-md-5 hidden-sm hidden-xs">{% trans 'Follow us on' %}</h6>
+                <ul class="social-icons col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <li><img src="{% static 'img/fb.png' %}"></li>
+                    <li><img src="{% static 'img/tw.png' %}"></li>
+                    <li><img src="{% static 'img/gp.png' %}"></li>
+                    <li><img src="{% static 'img/ig.png' %}"></li>
+                </ul>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 text-right">
+                <h6 class="footer-heading app-heading col-lg-5 col-md-5 hidden-sm hidden-xs">{% trans 'Download App' %}</h6>
+                <ul class="app-btns col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <li><a href="javascript:void(0)"><i class="fa fa-android fa-2x"
+                                                        aria-hidden="true"></i><span>{% trans 'Android' %}</span></a>
+                    </li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-apple fa-2x"
+                                                        aria-hidden="true"></i><span>{% trans 'IOS' %}</span></a></li>
+                </ul>
+            </div>
+            <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-center">
+                <div class="ft_rights">{% blocktrans %}Copyright © 2016 MTV - All Rights
+                    Reserved{% endblocktrans %}</div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

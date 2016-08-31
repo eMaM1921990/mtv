@@ -1,0 +1,13 @@
+{% load staticfiles %}
+{% load i18n %}
+<header>
+    <h1 class="trade-title">
+        <a href="tradein.html">{% trans 'TRADE' %}<br><b>{% trans 'IN' %}</b></a>
+        <span onClick="javascript:window.open('tradein.html','_self');"></span>
+    </h1>
+
+    {% include 'base/home_top_slider_sell.html' %}
+    {% include 'base/home_top_slider_buy.html' %}
+
+
+</header>

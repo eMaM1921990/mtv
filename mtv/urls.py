@@ -13,11 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from allauth.account.views import logout
 from django.conf import settings
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
+from mtv_app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^$', views.home, name='/'),
+    url(r'^profile/(?P<id>.*)$', views.car_profile, name='car_profile'),
+    url(r'^accounts/logout/$', logout, {'next_page': '/'}, name='logout'),
+    url(r'^accounts/', include('allauth.urls')),
+]
+              # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

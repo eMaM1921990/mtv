@@ -1,0 +1,135 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="sell">
+        <div id="closel">Back <i class="fa fa-times-circle-o fa-4x" aria-hidden="true"></i></div>
+        <div class="sell-anim-block">
+            <span class="anim-hts">{% trans 'HOW TO' %} <strong>{% trans 'SELL' %}</strong></span>
+            <a href="sell.html"><h1 class="sell-now">SELL NOW</h1></a>
+                {% blocktrans %}
+					<span class="texst block1"><h2>Register your car</h2>
+					<p>Registering your car is super easy, you will fill an online form with your car details such as;
+                        Manufacturer, Model etc..</p>
+					<p>Or you can call us on 16833 to register your car.</p>
+					</span>
+					<span class="texst block2"><h2>Checkup & Evaluation:</h2>
+					<p>You will be invited by one of our representatives to come with your car to check it.</p>
+					<p>We are inspecting 60 different points inside every car to make sure that they are eligible to be
+                        MTV certified car.</p>
+					</span>
+					<span class="texst block3"><h2>Offer</h2>
+					<p>We use data from a wide variety of sources, including industry-standard price comparison tools to
+                        make sure that we will offer you the best price possible.</p>
+					</span>
+					<span class="texst block4"><h2>Cash up</h2>
+					<p>If you accept our offer, You get paid...!</p>
+					</span>
+                {% endblocktrans %}
+
+            <div class="item1-css-clip-path"><img
+                    style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                    src="{% static 'img/phone-mask.png' %}" alt=""></div>
+            <div class="item2-css-clip-path">
+                <img style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                     src="{% static 'img/phone-mask.png' %}" alt="">
+                <img class="checked-car" src="{% static 'img/checked-car.png' %}" alt="">
+                <img class="mark1" src="{% static 'img/mark1.png' %}" alt="">
+                <img class="mark2" src="{% static 'img/mark2.png' %}" alt="">
+                <img class="mark3" src="{% static 'img/mark3.png' %}" alt="">
+                <img class="mark4" src="{% static 'img/mark4.png' %}" alt="">
+            </div>
+            <div class="item3-css-clip-path">
+                <img style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                     src="{% static 'img/phone-mask.png' %}" alt="">
+                <img class="offer-car" src="{% static 'img/offer.png' %}" alt="">
+            </div>
+            <div class="item4-css-clip-path"><img
+                    style="width: 77%;height: 80.5%;margin-left: 1.9%;margin-top: 7%;margin-bottom: auto;"
+                    src="{% static 'img/phone-mask.png' %}" alt=""></div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 17%;height: 600px;top: 350px;left: 10.5%;">
+                <svg class="swirls dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="40 0 310 10">
+                    <path id="path" fill="none" stroke-width="3" stroke-dasharray="3,20"
+                          d="M162.57865811969918,29.048364672400936c-13.572513342600018,12.50647358629999,-32.24786819527034,39.58471272516671,-31,67s56.243941793999966,64.44670248700004,55,91s-44.372287570699996,53.224810040900024,-57,106.99999999999997s59.45172931809998,71.50676341389999,62,108s-103.09164123480002,109.43620267430003,-95,158s31.415112206277485,71.23451866567245,56.000000000000796,57.99999999999898s38.75795745843067,-11.480143648290209,56.99715099711025,-7.9914529914946115s21.953772107049247,12.464904020924223,33.002849002890486,16.991452991493702s16.145991612399996,0.052076679099968715,25.999999999999943,-2"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 53%;height: 800px;top: 580px;left: 27%;transform: rotate(85deg);">
+                <svg class="swirls2 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="0 -250 1000 100">
+                    <path id="path2" fill="none" stroke-width="6" stroke-dasharray="4,20"
+                          d="M362.7824655639161,461.29765838587116c10.33098333357475,-24.792629083436736,-42.3735983849179,-56.73392994792306,-77.38805809015423,-76.30265995505283s-70.43301096070442,66.07291143097649,-107.42033360235212,59.63422710598138s-29.81808667443991,-40.4873739538981,-30.254838506739134,-56.94307810486316s8.206005688027147,-64.13932638179426,11.629509646052355,-86.5493779595098s20.061321445329753,-90.33869111841275,38.149348892290476,-134.4189603295378s58.81150629108657,-70.1155365061681,66.26008273291171,-76.14896226125052s29.353010618283406,-19.56943543361939,56.50090583828421,-46.60259934146262s55.51205627468431,-40.12217052789697,58.17893789005052,-94.94675434190981s-40.77155551346277,-92.51600868567277,-26.81384918247187,-78.78544787623918"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 23%;height: 600px;top: 650px;left: 67.5%;transform: rotate(5deg);">
+                <svg class="swirls3 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="485 0 380 400">
+                    <path id="path3" fill="none" stroke-width="3" stroke-dasharray="3,20"
+                          d="M831,119c10.442708191700035,9.461096428199994,30.365980494800056,35.923050072299986,23,69s-40.74063884179998,37.529001767500006,-59,91s-167.8407387981,38.3475218776,-180,78s8.34607776140001,46.41607692849999,20,91s-13.729292542599978,64.27959749189995,-60,68s-38.01389753199999,2.8488074708000113,-71,-4"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 33%;height: 350px;top: 907px;left: 17.5%;">
+                <svg class="swirls4 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="-2138 -1410 1330 600">
+                    <path id="path4" fill="none" stroke-width="8" stroke-dasharray="7,50"
+                          d="M-815.764363920875,-782.0773917248321c-49.33593999999994,10.722170000000006,-147.5053499999999,15.858450000000005,-212,-50s-8.3752199999999,-125.26750000000004,-154,-242s-209.18742999999995,-29.837170000000015,-402,-26s-300.5343499999999,-34.58412999999996,-360,2s-86.08130000000006,58.37302999999997,-132,158s-91.91869999999994,130.37302999999997,0,308"/>
+                </svg>
+            </div>
+
+            <div class="svg-container"
+                 style="position: absolute;z-index: 100;width: 40%;height: 350px;top: 1167px;left: 32.7%;">
+                <svg class="swirls5 dotted-anim" preserveAspectRatio="xMinYMin meet" viewBox="50 0 230 160">
+                    <path id="path5" fill="none" stroke-width="3" stroke-dasharray="2,10"
+                          d="M74.21758270263672,66.91505432128906c0.14903226587590268,-0.0003121484695327581,0.4470981052178473,-0.0003121484695327581,0.59613037109375,0s33.963874445266384,-6.006860394024713,56.631888592829455,8.64381200617008s26.67660673827467,18.181341219960714,26.825638567815076,18.1818181818182s27.0475964236268,20.134366888135688,52.459011481522424,24.441131591796875s35.578726950564146,16.22007275308087,59.612521721602576,15.499259948730469s55.65087395852794,9.565644203621645,67.36215209960938,4.1728668212890625s8.596577205311917,-1.8618676688499534,16.095367431640625,-7.7496185302734375"/>
+                </svg>
+            </div>
+        </div>
+			<span class="fade-in one">
+			<h1 class="sell-title">
+                {% trans 'SELL' %}
+            </h1>
+					
+					<p>
+                        {% trans 'The fastest and easiest way to sell your car with no intermediaries' %}
+                    </p>
+					
+						<h1 class="sell-how">
+                            {% trans 'How to sell?' %}
+                        </h1>
+					
+					</span>
+
+        <div id="layerslider2">
+            <div class="ls-layer hero-slide" style="slidedelay:5000; transition2d: 4;">
+                <img class="ls-s-1 sell-car" src="{% static 'lslider/gallery/sell0.png' %}" alt="R2yak Character"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+            <div class="ls-layer hero-slide" style="slidedelay:5000; transition2d: 4;">
+                <img class="ls-s-1 sell-car1" src="{% static 'lslider/gallery/sell1.png' %}" alt="R2yak Character"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor1"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+            <div class="ls-layer hero-slide" style="slidedelay:5000; transition2d: 4;">
+                <img class="ls-s-1 sell-car" src="{% static 'lslider/gallery/sell0.png' %}" alt="R2yak Character"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+            <div class="ls-layer hero-slide" style="slidedelay:5000; transition2d: 4;">
+                <img class="ls-s-1 sell-car1" src="{% static 'lslider/gallery/sell1.png' %}" alt="R2yak Character"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; ">
+
+                <div class="ls-s-1 slide-bgcolor1"
+                     style="slidedirection : top; delayin : 0; slideoutdirection : bottom; durationin : 1000; durationout : 2000; easingin : easeOutQuart; "></div>
+            </div>
+        </div>
+
+    </div>

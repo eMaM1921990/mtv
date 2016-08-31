@@ -1,0 +1,191 @@
+{% load staticfiles %}
+{% load i18n %}
+<section class="bg-primary" id="why">
+    <div class="container">
+        <div id="layerslider-container">
+
+            <div id="layerslider" style="width:100%; height: 500px; margin: 0px auto 20px auto;color:#555;">
+
+                <div class="ls-layer" style="slidedelay:15000; transition2d: 24,25,27,28,34,35,37,38,110,113; ">
+
+                    <img class="ls-s-1 ground" src="{% static 'lslider/gallery/s1-ground.png' %}" alt="R2yak Character"
+                         style="delayin : 2000; slidedirection : bottom; slideoutdirection : fade; durationin : 1600; durationout : 1500; easingin : easeInOutElastic; ">
+
+                    <img class="ls-s-1 hearts" src="{% static 'lslider/gallery/s1-hearts.gif' %}" alt="R2yak Character"
+                         style="delayin : 2900; slidedirection : fade; slideoutdirection : top; durationin : 1000; durationout : 1500; easingout : easeInOutElastic; ">
+
+                    <img class="ls-s-1 car" src="{% static 'lslider/gallery/s1-car.png' %}" alt="R2yak Character"
+                         style="slidedirection : right; delayin : 2500; slideoutdirection : left; durationin : 1400; durationout : 2000; easingin : easeOutQuart; ">
+
+                    <h5 class="ls-s3 br5 sl-header"
+                        style="slidedirection:top;  slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin:100;">
+                        {% trans 'We are super Easy' %}
+                    </h5>
+
+                    <h5 class="ls-s3 br5 sl-point"
+                        style="slidedirection:top; slideoutdirection:bottom; durationin:2100; easingin:easeInOutElastic; delayin : 500; scalein : 2;">
+                        <span>1</span>{% trans 'Find a Good Car' %}
+                    </h5>
+
+                    <p class="ls-s3 br5 sl-prg"
+                       style="font-size:16px;slidedirection:top; slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin : 500; scalein : 2;">
+                        {% trans 'Buying a used car hasn’t been any easier. Find a car that matches your needs, check its reports,run a test drive and lastly choose your favorable payment program.' %}
+                    </p>
+
+
+                </div>
+
+                <div class="ls-layer" style="slidedelay: 13000; transition2d: 76,77,78,79; ">
+
+                    <img class="ls-s-1 s2-money" src="{% static 'lslider/gallery/s2-money.gif' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1500; slideoutdirection : top; durationin : 600; durationout : 2000; easingin : easeOutQuart; ">
+
+
+                    <h5 class="ls-s3 br5 sl-header shrinkh"
+                        style="top:165px; left: 0px;font-size:38px; color:#d83c3c; font-weight:400;width: auto; height: 70px;slidedirection:top;  slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin:200;">
+                        {% trans 'We are Extraordinary Fast' %}
+                    </h5>
+
+                    <h5 class="ls-s3 br5 sl-point shrinkp"
+                        style="font-size:25px; top:220px; left: 60px;width:85%; height:auto; padding:0;slidedirection:top; slideoutdirection:bottom; durationin:2100; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        <span>2</span>{% trans 'Receive your Money Immediately' %}
+                    </h5>
+
+                    <p class="ls-s3 br5 sl-prg"
+                       style="font-size:16px; top:270px; left: 60px;width:350px; padding:0; white-space: normal;slidedirection:top; slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                       {% blocktrans %}
+                             Selling is just as easy. Just register your old car, get it inspected, receive our offer and get
+                        your payment upon approving the offer.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+
+                <div class="ls-layer" style="slidedelay: 11000; transition2d: 11;">
+
+
+                    <img class="ls-s-1 s3-waiting" src="{% static 'lslider/gallery/s3-waiting.gif' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 500; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic;">
+
+
+                    <h5 class="ls-s3 br5 sl-header shrinkh"
+                        style="top:165px; left: 0px; font-size:38px; color:#d83c3c; font-weight:400;width: auto; height: 70px;slidedirection:top;  slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin:200;">
+                        {% trans 'We are Extraordinary Fast' %}
+                    </h5>
+
+                    <h5 class="ls-s3 br5 sl-point"
+                        style="font-size:25px; top:220px; left: 60px;width:30%; height:auto; padding:0;slidedirection:top; slideoutdirection:bottom; durationin:2100; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        <span>3</span>{% trans 'No long waiting' %}
+                    </h5>
+
+                    <p class="ls-s3 br5 sl-prg"
+                       style="font-size:16px; top:270px; left: 60px;width:350px; padding:0; white-space: normal;slidedirection:top; slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        {% blocktrans %}
+                            Nothing is as fast as selling and buying your used car through Modern True Value. Spending days
+                        and nights
+                        {% endblocktrans %}
+                    </p>
+
+
+                </div>
+
+                <div class="ls-layer" style="slidedelay: 14500; transition2d: 92,93; ">
+
+                    <img class="ls-s-1 s4-headache" src="{% static 'lslider/gallery/s4-birdsman.gif' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 500; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic;">
+
+
+                    <h5 class="ls-s3 br5 sl-header shrinkh"
+                        style="top:165px; left: 0px; font-size:38px; color:#d83c3c; font-weight:400;width: auto; height: 70px;slidedirection:top;  slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin:200;">
+                        {% trans 'We are Extraordinary Fast' %}
+                    </h5>
+
+                    <h5 class="ls-s3 br5 sl-point"
+                        style="font-size:25px; top:220px; left: 60px;width:30%; height:auto; padding:0;slidedirection:top; slideoutdirection:bottom; durationin:2100; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        <span>4</span>{% trans 'No headache' %}
+                    </h5>
+
+                    <p class="ls-s3 br5 sl-prg"
+                       style="font-size:16px; top:270px; left: 60px;width:350px; padding:0; white-space: normal;slidedirection:top; slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        {% blocktrans %}
+                            You will no longer need to list your car on a website and wait for long hours, days and weeks.
+                            We assess your car to offer you a deal within a few days, and all what remains is approving the
+                            offer and receiving the payment.
+                        {% endblocktrans %}
+                    </p>
+
+
+                </div>
+
+                <div class="ls-layer" style="slidedelay: 13500; transition2d: 1; ">
+
+                    <img class="ls-s-1 s5-weirdo" src="{% static 'lslider/gallery/s5-weird.gif' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 500; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic;">
+
+
+                    <h5 class="ls-s3 br5 sl-header"
+                        style="top:155px; left: 0px; font-size:38px; color:#d83c3c; font-weight:400;width: auto; height: 70px;slidedirection:top;slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin:200;">
+                        {% trans 'We are Reliable' %}
+                    </h5>
+
+                    <h5 class="ls-s3 br5 sl-point"
+                        style="font-size:25px; top:220px; left: 60px;width:30%; height:auto; padding:0;slidedirection:top; slideoutdirection:bottom; durationin:2100; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        <span>5</span>{% trans 'No Weird people' %}
+                    </h5>
+
+                    <p class="ls-s3 br5 sl-prg"
+                       style="font-size:16px; top:270px; left: 60px;width:350px; padding:0; white-space: normal;slidedirection:top; slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                       {% blocktrans %}
+                             In Modern True Value you’ll avoid the hassle of local car merchants and daily random phone
+                        calls, as you will be dealing with automotive professionals that will always guide you towards
+                        the best choice.
+                        {% endblocktrans %}
+                    </p>
+
+                </div>
+
+                <div class="ls-layer" style="slidedelay: 12000; transition2d: 1; ">
+
+
+                    <img class="ls-s-1 s6-chr5" src="{% static 'lslider/gallery/s6-chr5.png' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1400; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic; ">
+
+                    <img class="ls-s-1 s6-chr4" src="{% static 'lslider/gallery/s6-chr4.png' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1350; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic; ">
+
+                    <img class="ls-s-1 s6-chr3" src="{% static 'lslider/gallery/s6-chr3.png' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1300; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic; ">
+
+                    <img class="ls-s-1 s6-chr2" src="{% static 'lslider/gallery/s6-chr2.png' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1250; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic; ">
+
+                    <img class="ls-s-1 s6-chr1" src="{% static 'lslider/gallery/s6-chr1.png' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1200; slideoutdirection : top; durationin : 2500; durationout : 2000; easingin : easeInOutElastic; ">
+
+                    <img class="ls-s-1 s6-line" src="{% static 'lslider/gallery/s6-line.png' %}" alt="R2yak Character"
+                         style="slidedirection : bottom; delayin : 1000; slideoutdirection : top; durationin : 2000; durationout : 2000; easingin : easeInOutElastic; ">
+
+                    <h5 class="ls-s3 br5 sl-header"
+                        style="top:155px; left: 0px;font-size:38px; color:#d83c3c; font-weight:400;width: auto; height: 70px;slidedirection:top;slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin:200;">
+                        {% trans 'We are Reliable' %}
+                    </h5>
+
+                    <h5 class="ls-s3 br5 sl-point"
+                        style="font-size:25px; top:220px; left: 60px;width:30%; height:auto; padding:0;slidedirection:top; slideoutdirection:bottom; durationin:2100; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        <span>6</span>{% trans 'Deal with Professionals' %}
+                    </h5>
+
+                    <p class="ls-s3 br5 sl-prg"
+                       style="font-size:16px; top:270px; left: 60px;width:350px; padding:0; white-space: normal;slidedirection:top; slideoutdirection:bottom; durationin:2200; easingin:easeInOutElastic; delayin : 700; scalein : 2;">
+                        {% blocktrans %}
+                            The assessment of all cars is executed under the supervision of a specialized team of engineers
+                        that ensure the credibility of every report.
+                        {% endblocktrans %}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

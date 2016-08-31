@@ -1,0 +1,51 @@
+{% load staticfiles %}
+{% load i18n %}
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                <!-- <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span> -->
+            </button>
+            <a class="navbar-brand page-scroll" href="{% url '/' %}"><img src="{% static 'img/logo.png' %}"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                    <li>{{ user.get_full_name }}</li>
+                {% else %}
+                        <li>
+                    {% include 'base/login.html' %}
+                </li>
+            {% endif %}
+
+                {% if user.is_authenticated %}
+                <li class="garagelink">
+                    <a class="page-scroll" href="garage.html">{% trans 'My Garage' %} <img class="nav-icon" src="{% static 'img/garage.png' %}"></a>
+                </li>
+                {% endif %}
+                <li class="selllink">
+                    <a class="page-scroll" href="sell.html">{% trans 'SELL' %}</a>
+                </li>
+                <li class="tradelink">
+                    <a class="page-scroll" href="tradein.html">{% trans 'TRADE IN' %}</a>
+                </li>
+                <li class="buylink">
+                    <a class="page-scroll" href="buy.html">{% trans 'BUY' %}</a>
+                </li>
+                <li class="lang-eng">
+                    <a class="page-scroll" href="arabic/index.html"><img src="{% static 'img/arabic-lang.png' %}"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

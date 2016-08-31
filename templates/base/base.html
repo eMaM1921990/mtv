@@ -1,0 +1,17 @@
+{% load staticfiles %}
+{% load i18n %}
+<html>
+{% block head %}
+{% endblock %}
+<body id="page-top">
+{% include 'base/navigtion.html' %}
+{% block content %}
+{% endblock %}
+
+{% include 'base/footer.html' %}
+</body>
+{% block js_source %}
+{% endblock %}
+{% block javascript %}
+{% endblock %}
+</html>
