@@ -18,3 +18,4 @@ DATABASES = {
 }
 
 MEDIA_ROOT = '/home/emam/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
