@@ -1,0 +1,24 @@
+{% load staticfiles %}
+{% load i18n %}
+<header>
+	               <ul class="profile-controls">
+							<li><img style="float:left;width:48%;margin-right:4%;" class="previous" src="{% static 'img/previous.png' %}"></li>
+							<li><img style="float:left;width:48%;" class="next" src="{% static 'img/next.png' %}"></li>
+						</ul>
+					<ul class="car-shots" style="">
+					<li class="hero-li"><img style="height:100%;" src="{{ car_info.car_image_one.url }}"></li>
+					<li><img style="height:100%;" src="{{ car_info.car_image_two.url }}"></li>
+					<li><img style="height:100%;" src="{{ car_info.car_image_three.url }}"></li>
+					<li><img style="height:100%;" src="{{ car_info.car_image_four.url }}"></li>
+					</ul>
+					<div class="car-tag">
+						<h1>{{ car_info.model.brand.brand_name|add:' '|add:car_info.model.model_name}} <span>{{ car_info.year }}</span></h1>
+						<p>{% trans 'Start engine, Airbags, Parking sensor, Multifunction steering wheel, Cruise control & Alloy wheels' %}</p>
+						<ul class="badges-list">
+							<li><img style="height:100%;" src="{% static 'img/badge-0001.png' %}" data-toggle="tooltip" data-placement="bottom" title="Great Condition" class="orange-tooltip"></li>
+							<li><img style="height:100%;" src="{% static 'img/badge-0002.png' %}" data-toggle="tooltip" data-placement="bottom" title="6 months in warranty" class="orange-tooltip"></li>
+							<li><img style="height:100%;" src="{% static 'img/badge-0003.png' %}" data-toggle="tooltip" data-placement="bottom" title="Insured" class="orange-tooltip"></li>
+						</ul>
+						<h1>{{ car_info.price }} EGP</h1>
+					</div>
+    </header>
