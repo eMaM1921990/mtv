@@ -1,0 +1,262 @@
+/*
+ * Master v3.3.6 (http://www.mediaemirate.com)
+ * Copyright 2011-2016 MediaEmirate, Inc.
+ * Licensed under MIT
+ */
+
+body, p{font-family: 'SwissraRegular', sans-serif!important;}
+h1, h2, h3 , h4, h5, h6{font-family: 'SwissraBlack', sans-serif!important;}
+.navbar-default, .btn, b, strong {font-family: 'SwissraRegular'!important;}
+ 
+.navbar-nav .selllink a, .navbar-nav .buylink a, .navbar-nav .tradelink a, .navbar-nav .lang-eng a {font-size: 17px;}
+.lang-eng a{font-family:'verdana';padding: 16px 8px!important;}
+.trade-title {padding-top: 74px;}
+.sell-title {padding: 50px 0;}
+.buy-title {padding: 60px 0;font-size:320%!important;}
+.anim-hts, .anim-htb {padding: 20px 0px;}
+.anim-htb strong {font-size: 34px;line-height: 42px;}
+.texst p {line-height: 20px;}
+.sell-now{padding: 25px 0px;}
+.buy-now {padding: 40px 0px;}
+.one>p , .two>p {font-size: 18px;direction: rtl;}
+.texst p {background-position: 100% 3px;padding-left: 0px;margin-left: 0;margin-right: 5%;text-align: right;direction: rtl;padding-right: 20px;}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {margin-left: 0;margin-right: -20px;}
+.form-horizontal .checkbox {margin-right: 20px;}
+.dropdown-menu li {text-align: right;}
+
+
+
+.sl-header {font-size: 33px;left:auto!important;right: 0px!important;text-align: right;top: 175px!important;}
+.sl-point {font-size: 26px;text-align: right;width: 90%;top: 230px!important;}
+.sl-point span{left:auto;right: -53px;top: 5px;}
+.sl-prg {right: 55px!important;top: 280px!important;left:auto!important;direction:rtl;text-align: right;}
+.car {left: 2%!important;-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);}
+.ground {left: 0px!important;}
+.hearts {left: 380px!important;}
+.s2-money, .s3-waiting, .s4-headache, .s5-weirdo {left: auto!important;right: 52%!important;}
+
+.s6-chr1 {left: 21.5%!important;}
+.s6-chr2 {left: 34%!important;}
+.s6-chr3 {left: 12%!important;}
+.s6-chr4 {left: 41%!important;}
+.s6-chr5 {left: 6%!important;}
+.s6-line {left: 0%!important;}
+
+.section-heading {width: 100%;font-size: 69px;margin-bottom: 9px;}
+.section-heading, .section-p{text-align: right;direction: rtl;float: right;}
+.views {right: auto;left: 15px;width:35%}
+.views span, .views h3{float:left;}
+.views h3{margin-left:10px;}
+
+
+ 
+.fullwidth .brand, .fullwidth .km-color, .fullwidth .add-garage{float:right;text-align: right;}
+.fullwidth .brand{padding-right:10px;}
+.km-color div{float:right;direction:rtl;text-align: right;}
+.white strong, .brown strong, .yellow strong, .lime strong, .gold strong, .grey strong, .purple strong, .grey strong, .silver strong, .black strong, .red strong, .darkred strong, .sky strong, .mocha strong {margin-right: 0;margin-left: 30px;padding-left: 10px;border-right:none;}
+.add-garage i {float: right;margin: auto 0 auto 4%;}
+.price, .add-garage {text-align: right;direction: rtl;}
+.car-card .discover {right: auto;left: 0;}
+.price h2 {font-size: 22px;}
+ 
+.km-color div:nth-child(1)>p{float:right!important;margin-left:5px;}
+.km-color div:nth-child(2)>strong::after{margin-left: 29px!important;}
+.fullwidth .km-color div:nth-child(2)>strong::after{margin-left: 43px!important;}
+.halfwidth .km-color div:nth-child(2)>strong::after{margin-left: 122px!important;}
+
+#contact{direction:rtl;}
+#contact>div>div>div:nth-child(1){float:right;border-left: 2px solid #eee;border-right: none!important;}
+#contact h3{font-size: 18px;}
+#contact p {padding: 0 0px 0 0;}
+.cblock{float:right;}
+.cblock p font{font-family: 'SwissraBlack'!important;}
+.footer-heading {float: right;}
+#social-footer>div>div>div:nth-child(1){float:right;text-align:right;}
+.social-icons {float: right;}
+.app-heading {text-align: left;padding-left: 20px;}
+ 
+ 
+ 
+ 
+ 
+ 
+/* Sell page */
+ 
+.sellpage .form-group{margin-left:0;} 
+.form-group>div:nth-child(1){float:right;direction:rtl;}
+.form-group>div:nth-child(2)>div:nth-child(1){float:right;} 
+.form-group>div:nth-child(2)>div:nth-child(2){border-left:none!important;border-right:1px solid #ddd;}
+.full-title{direction:rtl;} 
+.full-title div{float:right;} 
+.submit, .signin {float: right;} 
+.signin {width: 55%;} 
+ 
+ 
+/* Buy page */ 
+ 
+.buy-rightchunck p {text-align: right;direction: rtl;float: right;padding: 42% 12% 30px 12%;}
+.buypage .buy-rightchunck p{font-size: 18px!important;}
+.buy-leftchunck h2 {padding: 30% 0 0 0;font-size: 140px!important;line-height: 170px;} 
+.filter-title, .flist-wrapper, .flist{float:right;} 
+.filter-wrapper {right: 10px;left:auto;} 
+.add-filter {left: 8%;right:auto;} 
+.brands-list li, .models-list li, .year-list li, .price-list li, .km-list li, .color-list li {direction: rtl;font-family: inherit;} 
+ 
+.submenu-active::before {margin-right: -14px;margin-left: 5px;} 
+ 
+ 
+ 
+ /* Car Profile page */
+#car-profile>.container{direction:rtl;} 
+#car-profile .options{margin: 30px 7.5555% 120px 0!important;}
+#car-profile #accordion {padding-left:0;padding-right: 7.5%;} 
+#accordion .panel-title i{float:left!important;}
+.profile-page .car-shots, .profile-page .car-tag {float: right;padding: 15px 0 0 15px;margin-left: 58.6%;margin-right:0;text-align: right;direction: rtl;}
+.profile-page .hero-li {right: 42%;left:0;margin-left: 0!important;transform-origin: right!important;transition: right 400ms;}
+.badges-list li {float: right;}
+.badges-list {direction: rtl;}
+.profile-controls {right: 45%;}
+.panel-group .panel-heading + .panel-collapse > .panel-body {padding-right: 0;} 
+.car-tag h1 span{font-family: inherit;margin-right: 7px;margin-left:0;} 
+.car-tag h1 {font-size: 275%;margin: 2px 0 20px;padding-right: 20px;} 
+.tooltip{font-family:inherit;} 
+.panel-title  .point-heading{font-family:'SwissraMedium'!important;    font-size: 28px;}
+ 
+ 
+/* Garage page */ 
+ 
+.garage-page  .owl-item{direction:rtl;}
+.item-delete span {left: 0;right:auto;} 
+.item-delete h3, .item-compare h3 {text-align: right;padding-left: 45px;}
+.item-compare h3 {margin: 7px 0;}
+.item nav .drop-down li:first-child a {background-position: 5%!important;} 
+.item-compare h3 span, .item-compare h3 small, .item-delete h3 small, .item h2 span, .item h2 small {font-family: 'SwissraRegular';}
+.garage-page .main-heading {margin-bottom: 45px;}
+.slot-a, .slot-b{direction:rtl;}
+.compare-card h3 {float: right;}
+.compare-card .discover {left: 3%;right:auto;} 
+#compare .point-heading {font-family: 'SwissraMedium'!important;font-size:20px;letter-spacing: 0px;margin-left: 0px;margin-right: 30px;}
+.inspection-icon {left:auto;right: 2%;} 
+.stars {float: left;direction:ltr;} 
+.vs-circle{font-family: 'SwissraBlack'!important;font-size: 27px;padding: 15px 15px;} 
+ 
+ 
+ /*  Trade page  */
+ 
+ .tradepage #imageUploadForm .form-group{margin-left: -8.33333333%;}
+ .tradepage .buy-rightchunck p {padding: 40% 12% 30px 12%;}
+ .tradepage .trade-title {font-size: 100px;left: 70px!important;}
+ .range-heading, .range-heading h1{float:right;direction:rtl;}
+ .range-heading h1{margin: auto 0px auto 0px;}
+ 
+ 
+ /* Aboutus page */
+ 
+.aboutus #contact-form .container>div:nth-child(2){direction:rtl;margin-left:0;margin-right: -8.33333333%;} 
+ 
+ 
+ /* ContactUs page */
+ 
+.contactpage .form-group{margin-left:0;margin-right:8.33333333%;}
+#map {direction: rtl;} 
+#map .container div{float:right;} 
+#map .container>div:nth-child(1){margin-right: 16.66666667%;margin-left:0;}  
+#map p{font-size: 16px;text-align:right;} 
+.contact-image {right: 17%;left:auto;} 
+.contactpage .main-heading {text-align: right;} 
+.contactpage #contact-form p,.contact-us input, .contact-us textarea{direction:rtl;text-align:right;}
+ 
+ 
+ 
+ 
+ 
+ 
+ /* ***** Responsive Work Starts Here ***** */
+ 
+@media only screen and (min-width:1365px) and (max-width:1440px){
+
+/* Tradein page */	
+.tradepage .trade-title {font-size: 90px;left: 40px!important;top: 160px;}
+.tradepage .buy-rightchunck p {font-size: 21px!important;padding: 58% 12% 30px 12%;line-height: 28px;}
+	
+	
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@media only screen and (min-width:1025px) and (max-width:1360px){
+
+/* Tradein page */	
+.tradepage .trade-title {font-size: 80px;left: 25px!important;top: 150px;}
+.tradepage .buy-rightchunck p {padding: 65% 12% 30px 12%;line-height: 28px;}
+	
+	
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ @media only screen and (max-width: 1024px) {}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ @media only screen and (min-width:769px) and (max-width: 960px) {}
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ @media only screen and (max-width: 768px) {
+	 
+.buy-title {padding: 40px 0;font-size: 270%!important;}	 
+.price h2 {font-size: 18px;}	 
+	 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
