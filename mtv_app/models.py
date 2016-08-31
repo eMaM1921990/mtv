@@ -6,7 +6,7 @@ from django.db import models
 
 # Create your models here.
 from django.utils import timezone
-from mtv_app.utils import year_list, color_list, killometer_list, car_categories
+from mtv_app.utils import year_list, color_list, killometer_list, car_categories, car_options
 
 MANAGED = True
 
@@ -98,7 +98,7 @@ class CarInspection(models.Model):
 
 
 class CarOptions(models.Model):
-    car_option_icon = models.CharField(max_length=45,  verbose_name='Options')
+    car_option_icon = models.CharField(max_length=45,  verbose_name='Options', choices=car_options())
     car = models.ForeignKey(Car, models.DO_NOTHING, blank=True, null=True)
 
     def __unicode__(self):

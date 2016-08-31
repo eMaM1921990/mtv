@@ -32,3 +32,12 @@ def car_categories():
         ('Electronics / Features','Electronics / Features'),
         ]
     return categories
+
+def car_options():
+    options= [
+        ('m','Manual'),
+        ('a','Automatic'),
+        ('abs','ABS'),
+        ('ebs','EBS')
+    ]
+    return options
