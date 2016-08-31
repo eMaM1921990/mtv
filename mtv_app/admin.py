@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.forms.models import ModelMultipleChoiceField
 from django.forms.widgets import TextInput, SelectMultiple, CheckboxInput, CheckboxSelectMultiple
 from models import *
 # Register your models here.
