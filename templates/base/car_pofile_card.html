@@ -1,0 +1,20 @@
+{% load staticfiles %}
+{% load i18n %}
+<section id="car-profile">
+        <div class="container">
+			    {% include 'base/car_profile_options.html' %}
+                {% include 'base/car_profile_inspections.html' %}
+				<div class="container">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 no-padding">
+                    <img src="{% static 'img/shoppingcart-icon.png' %}" style="width:100%;height:auto;margin-top:-15px;">
+                </div>
+				<div class="col-lg-11 col-xs-10">
+                    <h1 class="point-heading">{% blocktrans %}Want to buy this amazing {% endblocktrans %} {{ car_info.model.brand.brand_name }}  ?</h1>
+					<hr class="divider"></hr>
+					<p>{% trans 'Sign in using your account to be able to register your car' %}</p>
+                </div>
+				</div><br><br><br><a href="javascript:void(0)" class="btn btn-default buynow-btn">{% trans 'BUY NOW' %}</a>
+				
+				
+        </div>
+    </section>

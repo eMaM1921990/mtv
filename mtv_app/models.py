@@ -87,7 +87,7 @@ class CarInspection(models.Model):
     inspection_description = models.TextField(max_length=2L, blank=True, null=True, verbose_name='Desc EN')
     inspection_description_ar = models.TextField(max_length=2L, blank=True, null=True, verbose_name='Desc AR')
     inspection_rate = models.IntegerField(default=0, verbose_name='Rate')
-    car = models.ForeignKey(Car, models.CASCADE, blank=True, null=True)
+    car = models.ForeignKey(Car, models.CASCADE, blank=True, null=True, related_name='car_inspection')
 
 
 
@@ -99,7 +99,7 @@ class CarInspection(models.Model):
 
 class CarOptions(models.Model):
     car_option_icon = models.CharField(max_length=45,  verbose_name='Options', choices=car_options())
-    car = models.ForeignKey(Car, models.DO_NOTHING, blank=True, null=True)
+    car = models.ForeignKey(Car, models.DO_NOTHING, blank=True, null=True,related_name='car_options')
 
     def __unicode__(self):
         return self.car_option_icon

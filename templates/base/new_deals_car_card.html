@@ -10,5 +10,5 @@
                         <div class="col-lg-12 text-left add-garage fav"><i class="fa fa-heart fa-2x"></i><a
                                 href="javascript:void(0)"> {% trans 'Add to garage' %}</a></div>
                         <div class="col-lg-12 text-left price"><h2>{{ car.price }} EGP</h2>
-                            <a href="profile.html" class="discover">{% trans 'Discover' %}</a></div>
+                            <a href="{% url 'car_profile' car.id %}" class="discover">{% trans 'Discover' %}</a></div>
 </div>

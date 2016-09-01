@@ -1,0 +1,17 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="container">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 no-padding">
+                    <img src="{% static 'img/explore-icon.png' %}" style="width:100%;height:auto;margin-top:-15px;">
+                </div>
+				<div class="col-lg-11 col-xs-10">
+                    <h1 class="point-heading">{% blocktrans %}Want to explore this amazing {{ car_info.model.brand.brand_name }}?' {% endblocktrans %}</h1>
+					<hr class="divider"></hr>
+					<p>{% trans 'This vehicle comes equipped with the following features' %}</p>
+                </div>
+				<div class="col-lg-1 col-xs-2 no-padding">
+                </div>
+				<div class="col-lg-11 col-sm-12 col-xs-12">
+                   <img src="{% static 'img/options-list.png' %}" style="width:70%;height:auto;margin:30px 0 120px;" class="options">
+                </div>
+				</div>

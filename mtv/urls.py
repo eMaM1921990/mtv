@@ -18,6 +18,7 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
+from django.views.static import serve
 from mtv_app import views
 
 urlpatterns = [
@@ -26,5 +27,6 @@ urlpatterns = [
     url(r'^profile/(?P<id>.*)$', views.car_profile, name='car_profile'),
     url(r'^accounts/logout/$', logout, {'next_page': '/'}, name='logout'),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }),
 ]
               # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

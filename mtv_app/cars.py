@@ -12,4 +12,4 @@ class Cars():
         return Car.objects.all().prefetch_related('model', 'location').exclude(km=0)
 
     def get_car_profile(self,id):
-        return Car.objects.get(id=id).prefetch_related('model', 'location')
+        return Car.objects.get(id=id)
