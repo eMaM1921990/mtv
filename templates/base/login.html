@@ -10,7 +10,7 @@
                                 <span class="arrow-down"></span>{% trans 'Login to your Account' %}
                             </li>
                             <li role="presentation">
-                                <form class="form-horizontal" role="form" action="{% url 'account_login' %}" id="login-form">
+                                <form class="form-horizontal" role="form" action="{% url 'account_login' %}" id="login-form" method="post">
                                     {% csrf_token %}
                                     {% if redirect_field_value %}
                                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
