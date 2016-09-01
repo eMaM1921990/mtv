@@ -1,0 +1,64 @@
+
+/* Drop Down Styles
+================================ */
+.item nav{
+    width: 106%;
+    margin-left: -4%;
+}
+.item nav .drop-down {
+  list-style: none;
+  overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
+  height: 85px; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
+  font-family: Arial;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  -webkit-transition: height 0.3s ease;
+          transition: height 0.3s ease;
+}
+
+.item nav .drop-down.closed {
+  /*  When toggled via jQuery this class will reduce the height of the ul which inconjuction
+      with overflow: hidden set on the ul will hide all list items apart from the first */
+  /* current li height 38px + 5px border */
+  height: 43px;
+}
+
+.item nav .drop-down li {
+ background-color: #bb9d5b;
+  border-bottom: 5px solid #8a723d;
+  padding: 5px;
+  transition:all 800ms;
+}
+
+.item nav .drop-down li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0 8px;
+}
+
+.item nav .drop-down li:first-child a {
+  background-image: url(img/add-compare.png);
+  background-position:98%;
+  background-repeat:no-repeat;
+  background-size:11%;
+}
+
+.item nav .drop-down li:first-child{
+    padding: 0;
+border:none;background-color:transparent;
+	}
+
+.item nav .drop-down li:nth-child(2), .item nav .drop-down li:nth-child(3){
+	width: 50%;
+    float: left;
+	text-align: center;
+	font-size: 15px;
+	}
+
+.item nav .drop-down li:nth-child(2):hover, .item nav .drop-down li:nth-child(3):hover{background-color:#8a723d;}
+
+.item nav .drop-down li:nth-child(2){border-right:3px solid #b79a5b;}
+.item nav .drop-down li:nth-child(3){border-left:3px solid #8a723d;}
+

@@ -1,0 +1,37 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="item">
+                            <h2>{{ car_info.model.brand.brand_name }}<span> {{ car_info.model.model_name }}</span><br>
+                                <small>{{ car_info.year }}</small>
+                            </h2>
+                            <div class="col-lg-12 no-padding item-pic">
+                                <span class="insla"><img src="{% static 'img/sima.png' %}" alt="Slot A"></span>
+                                <span class="inslb"><img src="{% static 'img/simb.png' %}" alt="Slot B"></span>
+                                <img src="{{ car_info.car_image_one.url }}" alt="Grab">
+                            </div>
+                            <div class="col-lg-12 item-price">
+                                <h4>{{ car_info.price }} LE</h4>
+                            </div>
+                            <div class="col-lg-12 item-compare">
+                                <nav>
+                                    <ul class="drop-down closed">
+                                        <li><a href="javascript:void(0)" class="nav-button">
+                                            {% blocktrans %}
+                                            <h3>COMPARE<span> IT</span><br>
+                                                <small>Add this car to comparison</small>
+                                            </h3>
+                                            {% endblocktrans %}
+                                        </a></li>
+                                        <li><a href="javascript:void(0)" class="sla">{% trans 'Slot A' %}</a></li>
+                                        <li><a href="javascript:void(0)" class="slb">{% trans 'Slot B' %}</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-lg-12 item-delete">
+                                <span><img src="{% static 'img/item-delete.png' %}"></span>
+
+                                <h3>
+                                    <small>{% trans 'Delete this car' %}</small>
+                                </h3>
+                            </div>
+                        </div>

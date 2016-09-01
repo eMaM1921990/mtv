@@ -81,15 +81,16 @@ class Car(models.Model):
 
 
 class CarInspection(models.Model):
-    inspection_category = models.CharField(max_length=45, blank=True, null=True, verbose_name='Category ',choices=car_categories())
-    inspection_outline = models.CharField(max_length=45, blank=True, null=True, verbose_name='Outline EN')
-    inspection_outline_ar = models.CharField(max_length=150, blank=True, null=True, verbose_name='Outline AR')
-    inspection_description = models.TextField(max_length=2L, blank=True, null=True, verbose_name='Desc EN')
-    inspection_description_ar = models.TextField(max_length=2L, blank=True, null=True, verbose_name='Desc AR')
+    inspection_category = models.CharField(max_length=45, verbose_name='Category ',choices=car_categories())
+    inspection_outline = models.CharField(max_length=45,  verbose_name='Outline EN')
+    inspection_outline_ar = models.CharField(max_length=150,  verbose_name='Outline AR')
+    inspection_description = models.TextField(max_length=4000,  verbose_name='Desc EN')
+    inspection_description_ar = models.TextField(max_length=4000,  verbose_name='Desc AR')
     inspection_rate = models.IntegerField(default=0, verbose_name='Rate')
-    car = models.ForeignKey(Car, models.CASCADE, blank=True, null=True, related_name='car_inspection')
+    car = models.ForeignKey(Car, models.CASCADE,  related_name='car_inspection')
 
-
+    def __unicode__(self):
+        return self.inspection_category
 
     class Meta:
         managed = MANAGED
@@ -100,6 +101,9 @@ class CarInspection(models.Model):
 class CarOptions(models.Model):
     car_option_icon = models.CharField(max_length=45,  verbose_name='Options', choices=car_options())
     car = models.ForeignKey(Car, models.DO_NOTHING, blank=True, null=True,related_name='car_options')
+
+    def __unicode__(self):
+        return self.car_option_icon
 
     def __unicode__(self):
         return self.car_option_icon

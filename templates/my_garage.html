@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>MTV</title>
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
     <!-- Custom Fonts -->
@@ -19,34 +21,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/creative.css' %}" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:900,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/img-upload.css' %}" type="text/css">
 	<link rel="stylesheet" href="{% static 'css/master.css' %}" type="text/css">
 	<link rel="stylesheet" href="{% static 'fonts/stylesheet.css' %}" type="text/css">
-        <script src="{% static 'lslider/layerslider/js/jquery.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/garage.css' %}" type="text/css">
+	    <script src="{% static 'lslider/layerslider/js/jquery.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
 </head>
 {% endblock %}
+
 {% block content %}
-    {% include 'base/car_profile_details.html' %}
-    {% include 'base/car_pofile_card.html' %}
-
-
-{% endblock %}
-
-
-{% block js_source %}
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- Plugin JavaScript -->
-    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'js/wow.min.js' %}"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="{% static 'js/creative.js' %}"></script>
-	<script src="{% static 'js/master.js' %}"></script>
-    <script src="{% static 'js/profile.js' %}"></script>
-{% endblock %}
-{% block javascript %}
-    <script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-</script>
-
+    {% include 'base/car_garage_cards.html' %}
 {% endblock %}
