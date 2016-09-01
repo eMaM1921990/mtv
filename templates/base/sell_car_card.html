@@ -1,0 +1,104 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="row full-title">
+            <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1 no-padding">
+                <img src="{% static 'img/cardata-icon.png' %}" style="width:100%;height:auto;margin-top:10px;">
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+                <h1 class="point-heading">{% trans 'Your Car data' %}</h1>
+                <hr class="divider"></hr>
+                <p>{% trans 'Fill in your car information in the form below' %}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="uploadWrapper">
+                <form id="imageUploadForm" role="form" class="imageUploadForm car-data" >
+                    {% csrf_token %}
+                    <div class="col-lg-11 col-lg-offset-1 col-xs-12 form-group">
+                        <div class="col-lg-5 padding-5">
+                            <select class="form-control input-lg" id="brand" onchange="getModel(this.value)">
+                                <option>{% trans 'Brand' %}</option>
+                                {% for brand in brands %}
+                                    <option value="{{ brand.id }}">{{ brand.brand_name }}</option>
+                                {% endfor %}
+                            </select>
+                            <select class="form-control input-lg" id="models" name="model_id">
+                                <option>{% trans 'Model' %}</option>
+                                {% include 'base/model_select_options.html' %}
+                            </select>
+                            <select class="form-control input-lg"
+                                    style="width:48%;margin-top:0;margin-right: 1.33%;display: inline-block;" id="year" name="year">
+                                <option>{% trans 'Year' %}</option>
+                                {% for year in years %}
+                                    <option value="{{ year.0 }}">{{ year.1 }}</option>
+                                {% endfor %}
+                            </select>
+                            <select class="form-control input-lg"
+                                    style="width:48%;margin-top:0;margin-left: 1.33%;display: inline-block;" id="km" name="km">
+                                <option>{% trans 'KM' %}</option>
+                                {% for km in kms %}
+                                    <option value="{{ km.0 }}">{{ km.1 }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    <input type="hidden" id="color" name="color">
+                        <div class="col-lg-7 no-padding">
+                            <div class="col-lg-6 padding-5">
+                                <div class="color-box">
+                                    <div style="position:relative;width:100%;height:64px;border-bottom:1px solid #D6D6D6;font-size: 18px;line-height: 60px;text-align:center;font-weight: bold;
+    color: #b7b7b7!important;">{% trans 'Colors' %}
+                                    </div>
+                                    <ul class="color-list" onclick="setColor()">
+                                        <li><span class="blueblack"></span></li>
+                                        <li><span class="purple"></span></li>
+                                        <li><span class="red"></span></li>
+                                        <li><span class="grey"></span></li>
+                                        <li><span class="yellow"></span></li>
+                                        <li><span class="sky"></span></li>
+                                        <li><span class="green"></span></li>
+                                        <li><span class="gold"></span></li>
+                                        <li><span class="black"></span></li>
+                                        <li><span class="brown"></span></li>
+                                        <li><span class="orange"></span></li>
+                                        <li><span class="blueblack"></span></li>
+                                        <li><span class="purple"></span></li>
+                                        <li><span class="red"></span></li>
+                                        <li><span class="grey"></span></li>
+                                        <li><span class="yellow"></span></li>
+                                        <li><span class="sky"></span></li>
+                                        <li><span class="green"></span></li>
+                                        <li><span class="gold"></span></li>
+                                        <li><span class="black"></span></li>
+                                        <li><span class="brown"></span></li>
+                                        <li><span class="orange"></span></li>
+                                    </ul>
+                                </div>
+                                <select class="form-control input-lg" id="sel5" name="location_id">
+                                    <option>{% trans 'Location' %}</option>
+                                    {% for location in locations %}
+                                        <option value="{{ location.id }}">{{ location.location_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-lg-6 padding-5">
+                                <div class="upload-block" style="height:215px;">
+                                    <div class="upload-box">
+                                        <input type='file' id="file" class="uploadButton" accept="image/*" name="image"/>
+
+                                        <div id="uploadedImg" class="uploadedImg">
+                                            <span class="unveil"></span>
+                                        </div>
+    <span class="pickFile">
+      <a href="#" class="pickFileButton">{% trans 'Upload Image' %}</a>
+    </span>
+                                    </div>
+                                    <!--<div class="upload-btn">Upload image</div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-default submit" style="" onclick="add_car_web()">{% trans 'SUBMIT' %}</button>
+                    </div>
+                </form>
+            </div>
+        </div>

@@ -28,11 +28,11 @@
 
                 {% if user.is_authenticated %}
                 <li class="garagelink">
-                    <a class="page-scroll" href="garage.html">{% trans 'My Garage' %} <img class="nav-icon" src="{% static 'img/garage.png' %}"></a>
+                    <a class="page-scroll" href="{% url 'my_garage' %}">{% trans 'My Garage' %} <img class="nav-icon" src="{% static 'img/garage.png' %}"></a>
                 </li>
                 {% endif %}
                 <li class="selllink">
-                    <a class="page-scroll" href="sell.html">{% trans 'SELL' %}</a>
+                    <a class="page-scroll" href="{% url 'sell' %}">{% trans 'SELL' %}</a>
                 </li>
                 <li class="tradelink">
                     <a class="page-scroll" href="tradein.html">{% trans 'TRADE IN' %}</a>

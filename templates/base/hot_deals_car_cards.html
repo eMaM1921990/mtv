@@ -15,8 +15,16 @@
                         {{ car.color }}
                     </div>
                 </div>
-                <div class="col-lg-12 text-left add-garage fav"><i class="fa fa-heart fa-2x"></i><a
-                        href="javascript:void(0)"> {% trans 'Add to garage' %}</a></div>
+                <div class="col-lg-12 text-left add-garage fav">
+                    {% if car.in_my_garage %}
+                        <i class="fa fa-heart fa-2x"></i>
+                        <a href="javascript:remove_car_from_garage({{ car.my_car.all.0.id }})"> {% trans 'Remove from garage' %}</a>
+                    {% else %}
+                        <i class="fa fa-heart-o fa-2x"></i>
+                        <a href="javascript:add_car_to_garage({{ car.id }})"> {% trans 'Add to garage' %}</a>
+                    {% endif %}
+
+                    </div>
                 <div class="col-lg-12 text-left price"><h2>{{ car.price }} EGP</h2><a href="{% url  'car_profile' car.id %}" class="discover">{% trans 'Discover' %}</a>
                 </div>
             </div>

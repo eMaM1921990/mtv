@@ -39,7 +39,7 @@
 }
 
 .item nav .drop-down li:first-child a {
-  background-image: url(img/add-compare.png);
+  background-image: url(/static/img/add-compare.png);
   background-position:98%;
   background-repeat:no-repeat;
   background-size:11%;

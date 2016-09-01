@@ -74,6 +74,11 @@ class Car(models.Model):
     def __unicode__(self):
         return self.model.model_name
 
+    def in_my_garage(self):
+        if self.my_car.all():
+            return self.id == self.my_car.all()[0].car.id
+        return False
+
     class Meta:
         managed = MANAGED
         db_table = 'car'
@@ -105,9 +110,6 @@ class CarOptions(models.Model):
     def __unicode__(self):
         return self.car_option_icon
 
-    def __unicode__(self):
-        return self.car_option_icon
-
     class Meta:
         managed = MANAGED
         db_table = 'car_options'
@@ -115,10 +117,18 @@ class CarOptions(models.Model):
 
 
 class MyGarage(models.Model):
-    car = models.ForeignKey(Car, models.CASCADE )
-    user = models.ForeignKey(User, models.CASCADE )
+    car = models.ForeignKey(Car, models.CASCADE, related_name='my_car', db_column='car_id')
+    user = models.ForeignKey(User, models.CASCADE, db_column='user_id')
 
     class Meta:
         managed = MANAGED
         db_table = 'my_garage'
 
+
+class Profile(models.Model):
+    phone_number = models.CharField(max_length=45)
+    user = models.ForeignKey(User, models.CASCADE, db_column='user_id')
+
+    class Meta:
+        managed = MANAGED
+        db_table = 'profile'

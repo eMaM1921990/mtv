@@ -61,6 +61,7 @@
 <body id="page-top">
 
 {% block content %}
+    {% csrf_token %}
     {% include 'base/home_top_slider.html' %}
 
     {% include 'base/home_why_slider.html' %}
@@ -85,6 +86,7 @@
 <script src="{% static 'js/creative.js' %}"></script>
 <script src="{% static 'js/master.js' %}"></script>
 <script src="{% static 'js/home.js' %}"></script>
+<script src="{% static 'app/common.js' %}"></script>
 {% endblock %}
 
 {% block javascript %}

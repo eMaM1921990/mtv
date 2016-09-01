@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.facebook',
     'endless_pagination',
     'mtv_app'
 ]
@@ -163,7 +163,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_VERIFICATION = "none"
 # ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_USERNAME_REQUIRED = False
-# ACCOUNT_SIGNUP_FORM_CLASS = 'mtv_app.forms.SignupForm'
+ACCOUNT_SIGNUP_FORM_CLASS = 'mtv_app.forms.SignupForm'
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 #
 # SOCIALACCOUNT_QUERY_EMAIL = True
@@ -182,4 +182,13 @@ SUIT_CONFIG = {
 
 }
 
+
+# EMAIL
+EMAIL_HOST = "mail.kazaorder.com"
+EMAIL_PORT = 25
+EMAIL_USE_SSL = False
+DEFAULT_FROM_EMAIL = 'a.elemam@kazaorder.com'
+EMAIL_HOST_USER = 'a.elemam@kazaorder.com'
+EMAIL_HOST_PASSWORD = '0122308791'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 

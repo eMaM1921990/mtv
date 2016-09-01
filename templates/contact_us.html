@@ -1,0 +1,131 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% block head %}
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>MTV</title>
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+        <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}" type="text/css">
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" type="text/css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/creative.css' %}" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Work+Sans:900,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/img-upload.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/master.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'fonts/stylesheet.css' %}" type="text/css">
+        <script src="{% static 'lslider/layerslider/js/jquery.js' %}"></script>
+    </head>
+{% endblock %}
+{% block content %}
+
+    <section id="contact-form">
+        <div class="container">
+            <div class="col-lg-12 text-left">
+                <h2 class="main-heading" style="margin-top:100px;margin-bottom: 0px;">{% trans 'Contact US' %}</h2>
+
+                <p>{% trans 'In order to register your car, please sign in using your account' %}</p>
+            </div>
+            <div class="row">
+                <form role="form" class="contact-us">
+                    {% csrf_token %}
+                    <div class="col-lg-11 col-lg-offset-1 col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4 col-xs-12 form-group">
+                        <div class="col-lg-3 no-padding">
+                        </div>
+                        <div class="col-lg-9 padding-5">
+                            <input type="email" class="form-control inpu-lg" id="exampleInputEmail" name="mail"
+                                   placeholder="{% trans 'E-mail' %}"/>
+                            <textarea type="text" class="form-control inpu-lg" id="exampleInputPassword" name="msg"
+                                      placeholder="{% trans 'Message' %}"/></textarea>
+                            <button type="submit" class="btn btn-default"
+                                    style="float:right;width:28%;margin-left:0px;margin-top:20px;">{% trans 'Send' %}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="map">
+        <img src="{% static 'img/contactus-bg.png' %}" class="contact-image">
+
+        <div class="container">
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    {% blocktrans %}
+                    <h1>VISIT US</h1><br>
+
+                    <h3>SERVICE CENTER</h3>
+
+                    <p>Km 28,<br>
+                        Cairo Alex Desert Rd.<br>
+                        Abu Rawash, Giza.<br>Mobile: 0112125656 / 01129032323</p>
+                    {% endblocktrans %}
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    {% blocktrans %}
+                    <h3>Dokki</h3>
+
+                    <p>26 Mesaha st. Dokki<br>
+                        Mobile: 01159788824</p>
+                    <br>
+
+                    <h3>Nasr City</h3>
+
+                    <p>24 Tayaran st. Nasr City<br>
+                        Mobile: 01129944234 – 01125044473<br>
+                        Land line: 2603569 – 2603570 – 2603571</p>
+                    {% endblocktrans %}
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    {% blocktrans %}
+                    <h3>Alexandria</h3>
+
+                    <p>355 Horeya road- Sidi Gaber, Alex<br>
+                        Mobile: 01116777872</p>
+                    <br>
+
+                    <h3>Asyout</h3>
+
+                    <p>Dar El Shefaa building, above zahraa tunnel – Asyout<br>
+                        Mobile: 01003718507</p>
+                    {% endblocktrans %}
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block js_source %}
+     <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/creative.js' %}"></script>
+	<script src="{% static 'js/master.js' %}"></script>
+<script src="{% static 'js/sell.js' %}"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+
+{% block javascript %}
+     <script>
+    $('body').addClass("contactpage");
+    </script>
+{% endblock %}
