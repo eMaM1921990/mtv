@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # 'allauth.socialaccount.providers.facebook',
     'endless_pagination',
-    'mtv_app'
+    'mtv_app',
+    'rosetta',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -60,6 +61,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.locale.LocaleMiddleware',
 ]
 
@@ -85,6 +87,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -179,6 +182,13 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'MTV AdminPanel',
     'SHOW_REQUIRED_ASTERISK': True,
     'CONFIRM_UNSAVED_CHANGES': True,
+    #  'MENU': (
+    #     'sites',
+    #     {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
+    #     {'app': 'rosetta', 'icon':'icon-lock', },
+    #     {'label': 'rosetta', 'icon':'icon-question-sign', 'url': '/rosetta/'},
+    #     {'app': 'mtv_app', 'icon':'icon-question-sign',},
+    # ),
 
 }
 

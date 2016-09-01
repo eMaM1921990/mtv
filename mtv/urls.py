@@ -36,6 +36,10 @@ urlpatterns = [
     url(r'^get_model', views.get_model, name='get_model'),
     url(r'^accounts/logout/$', logout, {'next_page': '/'}, name='logout'),
     url(r'^accounts/', include('allauth.urls')),
+    # Localizations #
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^rosetta/', include('rosetta.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }),
 ]
-              # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

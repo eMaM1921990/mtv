@@ -40,9 +40,16 @@
                 <li class="buylink">
                     <a class="page-scroll" href="buy.html">{% trans 'BUY' %}</a>
                 </li>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'en' %}
                 <li class="lang-eng">
-                    <a class="page-scroll" href="arabic/index.html"><img src="{% static 'img/arabic-lang.png' %}"></a>
+                    <a class="page-scroll" href="javascript:changeAppLanguage('ar')"><img src="{% static 'img/arabic-lang.png' %}"></a>
                 </li>
+            {% else %}
+                <li class="lang-eng">
+                    <a class="page-scroll" href="javascript:changeAppLanguage('en')">EN</a>
+                </li>
+            {% endif %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
