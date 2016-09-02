@@ -1,11 +1,13 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load watermark %}
+
 <div class="item car-card">
                         <div class="col-lg-12 no-padding"><h3>{{ car.model.brand.brand_name|add:' '|add:car.model.model_name|add:' '|add:car.year }}</h3></div>
-                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_one.url }}"></div>
-                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_two.url }}"></div>
-                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_three.url }}"></div>
-                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_four.url }}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_one.url|watermark:"water,opacity=10,position=50%x50%"  }}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_two.url|watermark:"water,opacity=10,position=50%x50%"}}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_three.url|watermark:"water,opacity=10,position=50%x50%"}}"></div>
+                        <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_four.url|watermark:"water,opacity=10,position=50%x50%" }}"></div>
                         <div class="brand"><strong>{{ car.model.brand.brand_name }}</strong><br>{{ car.model.model_name }}</div>
                         <div class="col-lg-12 text-left add-garage fav">
                             {% if car.in_my_garage %}

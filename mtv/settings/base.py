@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'endless_pagination',
     'mtv_app',
     'rosetta',
+    'watermarker',
 ]
 
 MIDDLEWARE_CLASSES = [

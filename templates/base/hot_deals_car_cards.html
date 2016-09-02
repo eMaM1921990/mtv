@@ -1,12 +1,13 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load watermark %}
 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center wow bounceInUp text-primary no-padding car-card"
                  data-wow-delay=".1s">
                 <div class="col-lg-12 no-padding"><h3>{{ car.model.brand.brand_name|add:' '|add:car.model.model_name|add:' '|add:car.year }}</h3></div>
-                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_one.url }}"></div>
-                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_two.url }}"></div>
-                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_three.url }}"></div>
-                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_four.url }}"></div>
+                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_one.url|watermark:"water,opacity=10,position=50%x50%" }}"></div>
+                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_two.url|watermark:"water,opacity=10,position=50%x50%" }}"></div>
+                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_three.url|watermark:"water,opacity=10,position=50%x50%" }}"></div>
+                <div class="col-lg-12 car-card-img no-padding"><img src="{{ car.car_image_four.url|watermark:"water,opacity=10,position=50%x50%" }}"></div>
                 <div class="brand"><strong>{{ car.model.brand.brand_name }}</strong><br>{{ car.model.model_name }}</div>
                 <div class="col-lg-12 km-color">
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 no-padding text-left"><strong>{% trans 'KM' %}</strong> {{ car.km }}
