@@ -41,3 +41,6 @@ def car_options():
         ('ebs','EBS')
     ]
     return options
+
+def price_list():
+    return tuple((str(n), str(n)) for n in range(0, 500000, 10000))

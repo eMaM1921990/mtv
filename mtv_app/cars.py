@@ -16,7 +16,7 @@ class Cars():
         return Car.objects.get(id=id)
 
     def get_my_garage(self, user):
-        return MyGarage.objects.filter(user=user,is_active=True,is_approved=True).prefetch_related('car')
+        return MyGarage.objects.filter(user=user,car__is_active=True,car__is_approved=True).prefetch_related('car')
 
     def add_to_garage(self, car_id, user):
         record = MyGarage(car=Car.objects.get(id=car_id), user=user)

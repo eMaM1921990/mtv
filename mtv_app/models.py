@@ -132,3 +132,13 @@ class Profile(models.Model):
     class Meta:
         managed = MANAGED
         db_table = 'profile'
+
+class CarTradIn(models.Model):
+    user = models.ForeignKey(User, models.CASCADE, db_column='user_id')
+    car_trad = models.ForeignKey(Car, models.CASCADE, related_name='trad_car', db_column='car_id')
+    car_trad_in = models.ForeignKey(Car, models.CASCADE, related_name='trad_card_in', db_column='car_trad_id')
+
+    class Meta:
+        managed = MANAGED
+        db_table = 'cars_trad_in'
+

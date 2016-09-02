@@ -31,12 +31,16 @@
 	<!-- LayerSlider script files -->
 	<script src="{% static 'lslider/layerslider/js/layerslider.transitions.js' %}" type="text/javascript"></script>
 	<script src="{% static 'lslider/layerslider/js/layerslider.kreaturamedia.jquery.js' %}" type="text/javascript"></script>
-
+    {% if LANGUAGE_CODE == 'ar' %}
+            <link rel="stylesheet" href="{% static 'css/arabic.css' %}" type="text/css">
+        {% endif %}
 </head>
 {% endblock %}
 {% block content %}
+    {% csrf_token %}
     {% include 'base/buy_slider.html' %}
     {% include 'base/filter.html' %}
+
     {% include 'base/home_hot_deals.html' %}
 {% endblock %}
 
@@ -50,7 +54,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/creative.js' %}"></script>
 	<script src="{% static 'js/master.js' %}"></script>
-    <script src="{% staic 'js/buy.js' %}"></script>
+    <script src="{% static 'js/buy.js' %}"></script>
+    <script src="{% static 'app/common.js' %}"></script>
+
 
 {% endblock %}
 

@@ -14,13 +14,13 @@
 				<h4 class="filter-head">{% trans 'Brand' %}</h4>
 				<ul class="brands-list">
 					{% for brand in brands %}
-                        <li data="{{ brand.id }}">{{ brand.brand_name }}</li>
+                        <li data="{{ brand.id }}" onclick="getModelFilter({{ brand.id }})">{{ brand.brand_name }}</li>
                     {% endfor %}
 				</ul>
 			</div>
 			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 no-padding flist">
 				<h4 class="filter-head">{% trans 'Model' %}</h4>
-				<ul class="models-list disabled">
+				<ul class="models-list disabled" id="model">
 					{% include 'base/model_li_data.html' %}
 				</ul>
 			</div>

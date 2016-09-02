@@ -38,7 +38,7 @@
                     <a class="page-scroll" href="tradein.html">{% trans 'TRADE IN' %}</a>
                 </li>
                 <li class="buylink">
-                    <a class="page-scroll" href="buy.html">{% trans 'BUY' %}</a>
+                    <a class="page-scroll" href="{% url 'buy' %}">{% trans 'BUY' %}</a>
                 </li>
             {% get_current_language as LANGUAGE_CODE %}
             {% if LANGUAGE_CODE == 'en' %}

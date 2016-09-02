@@ -71,7 +71,7 @@ $('.af1').click(function(){
 	} else {
 		$('.filter1 .fcolor').remove();
 	};
-	$('.filter1 li').append('<span class="delete"><img src="img/delete.png"></span>');
+	$('.filter1 li').append('<span class="delete"><img src="/static/img/delete.png"></span>');
 	$('.flist ul li').removeClass('submenu-active');
 	$('.color-list li').removeClass('color-active');
 	$(this).hide();
@@ -109,7 +109,7 @@ $('.af2').click(function(){
 	} else {
 		$('.filter2 .fcolor').remove();
 	};
-	$('.filter2 li').append('<span class="delete"><img src="img/delete.png"></span>');
+	$('.filter2 li').append('<span class="delete"><img src="/static/img/delete.png"></span>');
 	$('.flist ul li').removeClass('submenu-active');
 	$('.color-list li').removeClass('color-active');
 	$(this).hide();

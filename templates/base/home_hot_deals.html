@@ -24,11 +24,5 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            {% for car in hot_deal %}
-                {% include 'base/hot_deals_car_cards.html' %}
-            {% endfor %}
-        </div>
-    </div>
+    {% include 'base/hot_deal_cars_card.html' %}
 </section>

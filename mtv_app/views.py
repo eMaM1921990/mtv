@@ -14,7 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 from mtv_app.cars import Cars, CarUtils
 from django.utils.translation import ugettext as _
 from django.core.mail import send_mail
-from mtv_app.utils import year_list, killometer_list
+from mtv_app.utils import year_list, killometer_list, price_list
 
 
 @never_cache
@@ -164,4 +164,28 @@ def get_model(request):
         strHtml = render_to_string(template, context)
         return HttpResponse(strHtml)
 
+@never_cache
+def buy(request):
+    context = {}
+    template = 'buy.html'
+    if not request.user.is_authenticated():
+        context['login_form'] = LoginForm()
+    car_utils_instance = CarUtils()
+    car_instance = Cars()
+    context['brands'] = car_utils_instance.brand_list()
+    context['years'] = year_list()
+    context['kms'] = killometer_list()
+    context['prices'] = price_list()
+    context['hot_deal'] = car_instance.get_hot_deals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
 
+@login_required
+@csrf_exempt
+def get_model_filter(request):
+    if request.POST:
+        context = {}
+        template = 'base/model_li_data.html'
+        car_utils_instance = CarUtils()
+        context['models'] = car_utils_instance.model_by_brand(request.POST['brandId'])
+        strHtml = render_to_string(template, context)
+        return HttpResponse(strHtml)

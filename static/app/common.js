@@ -105,6 +105,29 @@ function getModel(brand_id){
 
 }
 
+
+function getModelFilter(brand_id){
+	$.ajax({
+		url : "/get_model_filter/",
+		type : "POST",
+		data : {
+			brandId : parseInt(brand_id),
+            csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value
+
+		},
+		success : function(responseText) {
+			$('#model').append(responseText);
+            $('#model').removeClass('disabled');
+
+		},
+		error : function(xhr, errmsg, err) {
+			console.log(errmsg);
+
+		}
+	});
+
+}
+
 function add_car_web(){
     var vFD = new FormData(document.getElementById('imageUploadForm'));
     $.ajax({
