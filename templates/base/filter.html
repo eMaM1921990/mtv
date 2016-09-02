@@ -1,0 +1,69 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 filters-area">
+<div class="filter-wrapper">
+</div>
+<div class="edit-filter"><img style="width:100%;height:auto;display:none;" src="{% static 'img/prev.png' %}"></div>
+<div class="add-filter af1 disabled"><img style="width:100%;height:auto;" src="{% static 'img/add.png' %}"></div>
+<div class="add-filter af2 disabled"><img style="width:100%;height:auto;" src="{% static 'img/add.png' %}"></div>
+<div class="add-filter af3 disabled"><img style="width:100%;height:auto;" src="{% static 'img/add.png' %}"></div>
+<div class="filter-strip"></div>
+        <div class="col-lg-3 col-md-2 filter-title"><span>{% trans 'Car search would be much easier through this' %} </span><strong>{% trans 'Filter' %}</strong></div>
+        <div class="col-lg-7 col-md-9 col-sm-12 col-xs-12 no-padding flist-wrapper">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 no-padding flist">
+				<h4 class="filter-head">{% trans 'Brand' %}</h4>
+				<ul class="brands-list">
+					{% for brand in brands %}
+                        <li data="{{ brand.id }}">{{ brand.brand_name }}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 no-padding flist">
+				<h4 class="filter-head">{% trans 'Model' %}</h4>
+				<ul class="models-list disabled">
+					{% include 'base/model_li_data.html' %}
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 no-padding flist">
+				<h4 class="filter-head">Year</h4>
+				<ul class="year-list disabled">
+					{% for year in years %}
+                        <li data="{{ year.0 }}">{{ year.1 }}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 no-padding flist">
+				<h4 class="filter-head">{% trans 'Price' %}</h4>
+				<ul class="price-list disabled">
+					{% for price in prices %}
+                        <li data="{{ price.0 }}">{{ price.1 }}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 no-padding flist">
+				<h4 class="filter-head">{% trans 'KM' %}</h4>
+				<ul class="km-list disabled">
+					{% for km in kms %}
+                        <li data="{{ km.0 }}">{{ km.1 }}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+            <input type="hidden" id="color">
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding flist">
+				<h4 class="filter-head">{% trans 'Color' %} </h4>
+				<ul class="color-list disabled" onclick="setColor()">
+					<li><span class="blueblack"></span></li>
+					<li><span class="purple"></span></li>
+					<li><span class="red"></span></li>
+					<li><span class="grey"></span></li>
+					<li><span class="yellow"></span></li>
+					<li><span class="sky"></span></li>
+					<li><span class="green"></span></li>
+					<li><span class="gold"></span></li>
+					<li><span class="black"></span></li>
+					<li><span class="brown"></span></li>
+					<li><span class="orange"></span></li>
+				</ul>
+			</div>
+			</div>
+			</div>

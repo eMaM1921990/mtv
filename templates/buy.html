@@ -1,0 +1,96 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% block head %}
+    <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MTV</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}" type="text/css">
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/creative.css' %}" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:900,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'fonts/stylesheet.css' %}" type="text/css">
+    <link rel="stylesheet"href="{% static 'lslider/layerslider/css/layerslider.css' %}"type="text/css">
+    <link rel="stylesheet"href="{% static 'lslider/assets/css/style.css' %}"type="text/css">
+    <script src="{% static 'lslider/layerslider/js/jquery.js' %}"></script>
+	<script src="{% static 'lslider/layerslider/js/greensock.js' %}" type="text/javascript"></script>
+	<!-- LayerSlider script files -->
+	<script src="{% static 'lslider/layerslider/js/layerslider.transitions.js' %}" type="text/javascript"></script>
+	<script src="{% static 'lslider/layerslider/js/layerslider.kreaturamedia.jquery.js' %}" type="text/javascript"></script>
+
+</head>
+{% endblock %}
+{% block content %}
+    {% include 'base/buy_slider.html' %}
+    {% include 'base/filter.html' %}
+    {% include 'base/home_hot_deals.html' %}
+{% endblock %}
+
+{% block js_source %}
+     <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fittext.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/creative.js' %}"></script>
+	<script src="{% static 'js/master.js' %}"></script>
+    <script src="{% staic 'js/buy.js' %}"></script>
+
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript">
+			$(document).ready(function(){
+				$('#layerslider-buy').layerSlider({
+					skinsPath : '{{ STATIC_URL }}lslider/layerslider/skins/',
+					skin : 'borderlesslight',
+					thumbnailNavigation : 'hover',
+					hoverPrevNext : false,
+					autoPlayVideos : false,
+					autoStart   : true,
+    responsive              : true,
+    responsiveUnder         : 0,
+    sublayerContainer       : 0,
+    firstLayer              : 1,
+    twoWaySlideshow         : false,
+    randomSlideshow         : false,
+    keybNav                 : false,
+    touchNav                : false,
+    imgPreload              : true,
+    navPrevNext             : false,
+    navStartStop            : false,
+    navButtons              : false,
+    thumbnailNavigation     : 'none',
+    hoverBottomNav          : false,
+    pauseOnHover            : false,
+    globalBGColor           : 'transparent',
+    globalBGImage           : false,
+    animateFirstLayer       : true,
+    loops                   : 0,
+    forceLoopNum            : false,
+    autoPauseSlideshow      : 'auto',
+    youtubePreview          : 'maxresdefault.jpg',
+    showBarTimer        : false,
+    showCircleTimer     : false
+				});
+
+			});
+    $('body').addClass("buypage");
+		</script>
+{% endblock %}
