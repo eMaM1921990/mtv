@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 text-left add-garage fav">
-                    {% if car.in_my_garage %}
+                    {% if car.in_my_garage and user.is_authenticated %}
                         <i class="fa fa-heart fa-2x"></i>
                         <a href="javascript:remove_car_from_garage({{ car.my_car.all.0.id }})"> {% trans 'Remove from garage' %}</a>
                     {% else %}
